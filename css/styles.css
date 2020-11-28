@@ -10193,3 +10193,9 @@ body{
 .bar.expert::before{
   width: calc(100% - 12px);
 }
+
+
+.spelling-error {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
