@@ -1,2 +1,2 @@
 # CV
-copyright: https://github.com/StartBootstrap/startbootstrap-resume
+Designed by: https://github.com/StartBootstrap/startbootstrap-resume
