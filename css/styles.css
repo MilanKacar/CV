@@ -6075,7 +6075,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #463f3c !important;
+  background-color: #404251 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -10172,7 +10172,7 @@ body{
 }
 
 .bar.front::before{
-  background-color: #463f3c;
+  background-color: #404251;
 }
 .bar.back::before{
   background-color: #705b51;
