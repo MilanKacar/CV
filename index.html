@@ -37,8 +37,22 @@
                 </ul>
             </div>
         </nav>
+
+        <script>
+            // JavaScript function to calculate years of experience
+            function calculateExperience(startYear) {
+                const currentYear = new Date().getFullYear();
+                const baseExperience = currentYear - startYear;
+                return baseExperience > (currentYear - 2018) ? baseExperience + 1 : baseExperience;
+            }
+        
+            // Update the experience dynamically
+            document.getElementById("experience-years").textContent = calculateExperience(2018);
+        </script>
         <!-- Page Content-->
         <div class="container-fluid p-0">
+
+        
 
             
 
@@ -57,7 +71,8 @@
                         </u>
                     </div>
                     <p class="lead mb-5">
-                        I am a Software Engineer and Survey Engineer with over 5 years of professional experience. I hold a degree in Geodesy from Graz University of Technology in Austria, where I also gained valuable experience as a project and teaching assistant. Currently, I apply my skills in the e-commerce and fintech sectors, working as a Data Scientist, Engineer, and Analyst for Niceshops GmbH and Gateway Ventures GmbH.
+                        I am a Software Engineer and Survey Engineer with <span id="experience-years">5</span> years of professional experience. I hold a degree in Geodesy from Graz University of Technology in Austria, where I also gained valuable experience as a project and teaching assistant. Although my journey took longer than expected due to a deep focus on work and industry projects, I completed my thesis, combining practical insights with academic rigor.
+                        Currently, I apply my skills in the e-commerce and fintech sectors, working as a Data Scientist, Engineer, and Analyst for Niceshops GmbH and Gateway Ventures GmbH.
                         I grew up in Mrkonjić Grad (Republic of Srpska, BA), where I completed my high school education with a focus on Mathematics, Logic, and Physics at an advanced level. These formative experiences have shaped my technical and analytical abilities. 
                         <br>
                         <br>
@@ -65,7 +80,8 @@
                         <br>
                         <br>
                         For recruiters, feel free to download my CV from <a href="https://milankacar.github.io/CV/assets/img/Milan_KACAR_CV.pdf">here</a>.
-                    </p>
+                    </p> 
+
 
                     <div class="social-icons">
                         <a class="social-icon" href="https://milankacar.github.io/"><i class="fas fa-blog"></i></a>
