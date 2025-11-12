@@ -1,7 +1,7 @@
 // assets/js/page.js
 window.addEventListener('load', function () {
   const loader = document.getElementById('loader');
-  const DURATION = 2000;
+  const DURATION = 500;
 
   if (loader) loader.classList.remove('hidden');
 
@@ -20,11 +20,9 @@ window.addEventListener('load', function () {
 // (Optional) smart Back to Projects
 (function () {
   const btn = document.getElementById('backBtn');
-  const loader = document.getElementById('loader');
   if (!btn) return;
   if (!loader) return;
   try {
-    loader.classList.add('hidden');
     const sameOriginReferrer =
       document.referrer &&
       new URL(document.referrer).origin === location.origin;
@@ -33,7 +31,6 @@ window.addEventListener('load', function () {
         e.preventDefault();
         history.back();
       });
-      
     }
   } catch {}
 })();
