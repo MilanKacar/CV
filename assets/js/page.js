@@ -20,6 +20,7 @@ window.addEventListener('load', function () {
 // (Optional) smart Back to Projects
 (function () {
   const btn = document.getElementById('backBtn');
+  const loader = document.getElementById('loader');
   if (!btn) return;
   if (!loader) return;
   try {
@@ -32,5 +33,8 @@ window.addEventListener('load', function () {
         history.back();
       });
     }
-  } catch {}
+    loader.classList.add('hidden');
+  } catch {
+    loader.classList.add('hidden');
+  }
 })();
