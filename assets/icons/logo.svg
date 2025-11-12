@@ -1,0 +1,27 @@
+<svg width="128" height="96" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MK badge (rounded, monoline, separated, centered)">
+  <defs>
+    <linearGradient id="mk-grad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="10%" stop-color="var(--primary, #667eea)"/>
+      <stop offset="100%" stop-color="var(--secondary, #764ba2)"/>
+    </linearGradient>
+    <style>
+      :root {
+        --primary:#667eea; --secondary:#764ba2;
+        --dark:#0a0a0a; --darker:#1a1a2e;
+        --text:#ffffff; --text-secondary:rgba(255,255,255,.8);
+      }
+    </style>
+  </defs>
+
+  <!-- Center on (128,128), then scale down to 80% -->
+  <!-- Original glyph bbox center is at (118,48) in its own coords -->
+  <g transform="translate(128,128) scale(0.8) translate(-118,-48)"
+     fill="none" stroke="url(#mk-grad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <!-- M -->
+    <path d="M36 72 L36 24 L88 72 L140 24 L140 72" />
+    <!-- K (own stem at x=160, separated from M's right leg at x=140) -->
+    <path d="M160 24 L160 72" />
+    <path d="M160 48 L200 24" />
+    <path d="M160 48 L200 72" />
+  </g>
+</svg>
