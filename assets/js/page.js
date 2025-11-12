@@ -24,6 +24,7 @@ window.addEventListener('load', function () {
   if (!btn) return;
   if (!loader) return;
   try {
+    loader.classList.add('hidden');
     const sameOriginReferrer =
       document.referrer &&
       new URL(document.referrer).origin === location.origin;
@@ -32,7 +33,7 @@ window.addEventListener('load', function () {
         e.preventDefault();
         history.back();
       });
-      loader.classList.add('hidden');
+      
     }
   } catch {}
 })();
