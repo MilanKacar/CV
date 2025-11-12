@@ -1,518 +1,1151 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>CV - Milan Kacar</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/ironman.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="color: rgba(192,193,215,255);" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Milan Kacar</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#personality">Personality</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#languages">Languages</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/icons/logo.svg" type="image/svg+xml" />
+    <title>Milan Kacar - AI Engineer | Data Scientist | Data Engineer</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script defer type="text/javascript" src="./assets/js/main.js"></script>
+    <script defer type="text/javascript" src="./assets/js/cards.js"></script>
+    <script defer type="text/javascript" src="./assets/js/page.js"></script>
+    <script defer type="text/javascript" src="./assets/js/decrypt.js"></script>
+    <script src="/js/decrypt-after-loader.js" defer></script>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader-container" id="loader">
+      <div class="chip">
+        <div class="chip-outer">
+          <div class="chip-inner">
+            <div class="chip-circuits">
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
             </div>
-        </nav>
-            
-
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Kacar
-                        <span class="text-primary">Milan</span>
-                    </h1>
-                    <div class="subheading mb-5">
-
-                        Vienna· Austria ·
-                        <u>
-                            <a href="mailto:milankacar@live.com">milankacar@live.com</a>
-                        </u>
-                    </div>
-                    <p class="lead mb-5" id="dynamic-experience">
-                        I am a Software Engineer and Survey Engineer with over <span id="years-placeholder"></span> years of professional experience. I hold a degree in Geodesy from Graz University of Technology in Austria, where I also gained valuable experience as a project and teaching assistant. Although my journey took longer than expected due to a deep focus on work and industry projects, I successfully completed my thesis, combining practical insights with academic rigor.
-                        Currently, I apply my skills in the e-commerce and fintech sectors, working as a Data Scientist, Engineer, and Analyst for Niceshops GmbH and Gateway Ventures GmbH.
-                        I grew up in Mrkonjić Grad (Republic of Srpska, BA), where I completed my high school education with a focus on Mathematics, Logic, and Physics at an advanced level. These formative experiences have shaped my technical and analytical abilities. 
-                        <br>
-                        <br>
-                        To explore more about my interests, feel free to visit my <a href="https://milankacar.github.io/">blog</a>.
-                        <br>
-                        <br>
-                        Recruiters, feel free to download my CV:
-                        📄 <a href="https://milankacar.github.io/CV/assets/img/Milan_KACAR_CV.pdf" target="_blank">English Version</a> |  
-                        📄 <a href="https://milankacar.github.io/CV/assets/img/Milan_KACAR_CV_DE.pdf" target="_blank">German Version</a>
-                    </p> 
-                    
-                    <script>
-                        // JavaScript function to calculate and inject experience directly into text
-                        function calculateExperience(startYear) {
-                            const currentYear = new Date().getFullYear();
-                            const baseExperience = currentYear - startYear;
-                            return baseExperience > (currentYear - 2018) ? baseExperience + 1 : baseExperience;
-                        }
-                    
-                        // Inject the calculated experience directly into the paragraph text
-                        const experienceYears = calculateExperience(2018);
-                        const paragraph = document.getElementById("dynamic-experience");
-                        paragraph.innerHTML = paragraph.innerHTML.replace(
-                            '<span id="years-placeholder"></span>',
-                            `${experienceYears}`
-                        );
-                    </script>
-
-
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://milankacar.github.io/"><i class="fas fa-blog"></i></a>
-                        <a class="social-icon" href="https://www.linkedin.com/in/milan-kacar/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/MilanKacar"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="https://www.instagram.com/milan_kacar/"><i class="fab fa-instagram"></i></a>
-                        <a class="social-icon" href="https://www.facebook.com/milankacar2/"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-
-
-                </div>
-            </section>
-            <hr class="m-0" />
-
-            <!-- Experience-->
-            <section class="resume-section" id="personality">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Personality</h2>
-
-
-                        <div class="bar front expert" data-skill="Problem solving"></div>
-                        <div class="bar front expert" data-skill="Motivation"></div>
-                        <div class="bar front expert" data-skill="Ambition"></div>
-                        <div class="bar front expert" data-skill="Willingness to learn"></div>
-                        <div class="bar front advanced" data-skill="Independent"></div>
-                        <div class="bar front advanced" data-skill="Teamwork"></div>
-                        <div class="bar front advanced" data-skill="Optimism"></div>
-                        <div class="bar back intermediate" data-skill="Tolerant"></div>
-                        <div class="bar back intermediate" data-skill="Confidence"></div>
-
-                    
-                      </div>
-                      
-                </div>
-            </section>
-            <hr class="m-0" />
-
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Gymnasium Mrkonjic Grad, Bosnia and Herzegovina</h3>
-                            <div class="subheading mb-3"></div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2010 - 2014</span></div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Graz University of Technology, Austria</h3>
-                            <div class="subheading mb-3">Bachelor of Science</div>
-                            <div>Geomatics Engineering</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2015 - 2019</span></div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Graz University of Technology, Austria</h3>
-                            <div class="subheading mb-3">Master's Degree Programme</div>
-                            <div>Geodesy</div>
-                                <ul class="fa-ul mb-0">
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-minus"></i></span>
-                                        Navigation
-                                    </li>
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-minus"></i></span>
-                                        Geoinformatics
-                                    </li>
-                                </ul>
-                                <div class="subheading mb-3"></div>
-                          </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2019 - 2024</span></div>
-                    </div>
-
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Graz University of Technology, Austria</h3>
-                            <div class="subheading mb-3">Master's Degree Programme</div>
-                            <div>Computer Science</div>
-                            <ul class="fa-ul mb-0">
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-minus"></i></span>
-                                        Data Science
-                                    </li>
-                                    <li>
-                                        <span class="fa-li"><i class="fas fa-minus"></i></span>
-                                        Statistics
-                                    </li>
-                                </ul>
-                                <div class="subheading mb-3"></div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2020 - 2024</span></div>
-                    </div>
-
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Data Engineer / Scientist / Analyst </h3>
-                            <div class="subheading mb-3"> niceshops GmbH </div>
-                            <p>Working on various projects in Finance, Business Controlling & Performance Marketing topics.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">January 2022 - pending </span></div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Data Engineer / TL </h3>
-                            <div class="subheading mb-3"> Gateway Ventures GmbH </div>
-                            <p>Working on various projects in Finance (Startup Founding), Processes Automation, and Project Management.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2023 - pending </span></div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Co-Founder </h3>
-                            <div class="subheading mb-3"> RushB </div>
-                            <p>Designed, built, and implemented a Web Application that utilizes QR and NFC technologies. The app is based on PHP, JavaScrip, JQuery, and MySQL, and it enables you to order food/drinks from the menu and contact your bartender by simply tapping the NFC tag on the table with your smartphone. It is not only a preview of the menu but a full ordering system with the option to pay immediately.
-                            Together with <a href="https://stefan.gajanovic.com/cv.html">Stefan Gajanovic</a>.
-                            </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2021 - pending </span></div>
-                    </div>
-                
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Engineer</h3>
-                            <div class="subheading mb-3">TU Graz, VSI</div>
-                            <p>Working on various projects in Automation, Statistics & Geoinformatics in the Automotive industry.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2019 - January 2022 </span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Teaching Assistant</h3>
-                            <div class="subheading mb-3">TU Graz, IFG</div>
-                            <p>Indoor navigation, filtering, sensor fusion.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2021 - January 2022 </span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">survey engineer</h3>
-                            <div class="subheading mb-3">GEOdata</div>
-                            <p>Tunnel survey | 3D Laser scanner measurements</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">July 2019 - December 2019</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-
-            <!-- Experience-->
-            <section class="resume-section" id="languages">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Languages</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Bosnian · Serbian · Croatian </h3>
-                            <div class="subheading mb-3">Native</div>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">German</h3>
-                            <div class="subheading mb-3">C 1</div>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">English</h3>
-                            <div class="subheading mb-3">B 2 - C 1</div>
-                            <p></p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Russian</h3>
-                            <div class="subheading mb-3">A 2</div>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </section>
-
-
-            <hr class="m-0" />
-            
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-
-                        <li class="list-inline-item"><i class="devicon-python-plain-wordmark"></i></li>
-                        <li class="list-inline-item"><i class="devicon-googlecloud-plain"></i></li>
-                        <li class="list-inline-item"><i class="devicon-docker-plain-wordmark"></i></li>
-                        <li class="list-inline-item"><i class="devicon-c-plain"></i></li>
-                        <li class="list-inline-item"><i class="devicon-cplusplus-plain"></i></li>
-                        <li class="list-inline-item"><i class="devicon-php-plain"></i></li>
-                        <li class="list-inline-item"><i class="devicon-scala-plain-wordmark"></i></li>
-                        <li class="list-inline-item"><i class="devicon-java-plain-wordmark"></i></li>
-                        <li class="list-inline-item"><i class="devicon-linux-plain"></i></li>
-                        <li class="list-inline-item"><i class="devicon-postgresql-plain-wordmark"></i></li>
-                        <li class="list-inline-item"><i class="devicon-mysql-plain-wordmark"></i></li>
-                        <li class="list-inline-item"><i class="devicon-git-plain-wordmark"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="devicon-kubernetes-plain-wordmark"></i></li>
-                        <li class="list-inline-item"><i class="devicon-r-original"></i></li>
-                        <li class="list-inline-item"><i class="devicon-apache-plain-wordmark"></i></li>
-
-                        
-                        
-                    </ul>
-                    <div class="subheading mb-3">Other skills</div>
-                    <div class="bar front expert" data-skill="Looker"></div>
-                    <div class="bar front expert" data-skill="Navigation"></div>
-                    <div class="bar front expert" data-skill="Satellite Geodesy"></div>
-                    <div class="bar front expert" data-skill="Geographic Information System (GIS)"></div>
-                    <div class="bar front expert" data-skill="Data Structures and Algorithms (Development & Analysis)"></div>
-                    <div class="bar front expert" data-skill="GNSS"></div>
-                    <div class="bar front expert" data-skill="Mathematics"></div>
-                    <div class="bar front advanced" data-skill="Signal Processing"></div>
-                    <div class="bar front advanced" data-skill="Engineering Geodesy"></div>
-                    <div class="bar front advanced" data-skill="Physical Geodesy"></div>
-                       
-            </section>
-            <hr class="m-0" />
-
-            <!-- Education-->
-            <section class="resume-section" id="projects">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Stock Prices Predictor (AI) </h3>
-                            <div class="subheading mb-3"></div>
-                            <p>The project employs a hybrid methodology integrating Artificial Intelligence (AI) and Machine Learning (ML) techniques to discern fluctuations in stock prices. It focuses on monitoring and analyzing stock price dynamics, taking into account various indices such as the S&P 500, Dow Jones, DAX, among others. This multifaceted approach aims to enhance the precision and robustness of stock price prediction and decision-making processes.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Lotto Numbers Predictor (Python)</h3>
-                            <p>The project titled "Lotto Number Predictor" was designed with the objective of developing a computational model to forecast the numbers likely to emerge in the next lottery draw. Leveraging statistical and analytical methodologies, the project sought to derive patterns or trends from historical data in order to inform predictions. This endeavor represents an attempt to harness data-driven insights in the domain of lottery number forecasting, with the ultimate aim of enhancing the accuracy of predicting winning numbers.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Scientific paper miner - SPaRC (C++) </h3>
-                            <p>The project endeavors to establish a comprehensive digital platform akin to a Google-like search engine, designed specifically for scientific papers. It aims to facilitate efficient and comprehensive retrieval of scholarly content, offering a valuable resource for researchers, academicians, and professionals seeking access to a vast repository of scientific knowledge and literature.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Pollen tree detector (from satellite images) (AI/Image detection) </h3>
-                            <p>Building a tree map of an area is very intensive task, especially when the trees are covering
-                                large and inaccessible sites. Numerous tree maps are available, but they are incomplete.
-                                However, having a detailed tree map may help predicting seasonal pollen spread in cities.
-                                Why is this important? Airborne pollen causes seasonal allergies. The number of people
-                                having allergic reactions increases on yearly basis. Remote collection of such information
-                                can be made possible through the utilization of satellite imagery. This project presents an
-                                automated tree detecting and identification method based on image processing of satellite
-                                imagery.
-                                </p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Different Arduino projects</h3>
-                            <p>Mostly projects from youtube tutorials and combination of different projects.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Different signal processing projects (TSA/Python)</h3>
-                            <p>The project primarily focuses on the domain of Global Navigation Satellite System (GNSS) signal processing, with an emphasis on encoding and decoding techniques. Its core objectives encompass safeguarding against spoofing attacks and conducting in-depth analysis of GNSS time series data. This endeavor represents a multifaceted effort to enhance the reliability and security of GNSS signal utilization.</p>
-                        </div>
-                    </div>
-
-                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Gravity anomaly maps (Python/Physics) </h3>
-                            <p>The GRACE (Gravity Recovery and Climate Experiment) mission is a scientific endeavor aimed at creating highly precise and detailed gravity anomaly maps of Earth. This mission involves the use of twin satellites equipped with sensitive instruments to measure variations in Earth's gravitational field. By analyzing these data, the GRACE mission provides critical insights into changes in the distribution of mass on our planet, offering valuable information for climate and environmental studies, as well as geophysical research.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Kalman Filter · Adevanced Kalman Filter ·  Particle Filter (Python/Statistics)</h3>
-                            <p>The project is centered around the implementation of state estimation and sensor fusion techniques for indoor navigation. It incorporates the Kalman Filter and its advanced counterpart, the Extended Kalman Filter, along with the Particle Filter. These methodologies are integral components of a comprehensive framework aimed at improving the accuracy and robustness of indoor positioning and navigation systems, ensuring precise localization and tracking within complex indoor environments.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"> Dynamic pricing strategy and competitor prices crawler (Python/Proxy/WebCrawling) </h3>
-                            <p> The project involves the implementation of dynamic pricing strategies and the development of web crawlers to collect and analyze competitor pricing data. Through this initiative, the primary goal is to systematically identify and assess key market rivals. Subsequently, by leveraging the insights garnered from this analysis, the project seeks to optimize pricing strategies to strategically influence fluctuations in product prices, thereby enhancing sales performance and market competitiveness. </p>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"> Demand prediction (AI) </h3>
-                            <p> The project involves the application of demand forecasting techniques to analyze and predict the demand for specific items, including both manufactured products and ordered articles, over the upcoming year. This analysis takes into account various factors, such as seasonality and the potential impact of public holidays, which may lead to fluctuations in demand. The aim is to provide accurate and data-driven insights to anticipate and plan for demand variations, thereby facilitating more effective inventory management and operational decision-making. </p>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"> Tinder for Investors (AI) - TL </h3>
-                            <p> 
-The project leverages the expertise and resources of our established cadre of prior investors to support and nurture startups within our purview. As a cornerstone of our operational strategy, this initiative entails the issuance of equity shares in the startups to these investors, commensurate with their contributions and assistance. This symbiotic relationship is particularly germane to startups, as it affords them a platform for articulating and elucidating their operational challenges, thereby facilitating the accrual of actionable insights and guidance from prospective investors to address and surmount these challenges effectively. </p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0"> Datalake Creation (GCP) - TL </h3>
-                            <p> The amalgamation of diverse data sources, encompassing Pipedrive, Mixpanel, Google Analytics, and our proprietary backend dataset, was orchestrated to establish a comprehensive data lake. This data repository serves as an invaluable resource, enabling us to gain nuanced insights into the corporate landscape. It empowers us to discern the present positioning of our organization, proffers actionable guidance for potential improvements, and streamlines the process of making informed and astute business decisions.  </p>
-                        </div>
-                    </div>
-
-
-                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Pitch Deck Analyzer (AI) - TL </h3>
-                            <p>Upon the submission of a startup's pitch deck, our initial imperative involves the meticulous analysis of its content. To expedite and systematize this endeavor, we have implemented an automated procedure. The pitch decks are subjected to a process of dissection, wherein they are deconstructed into constituent images and text components. An artificial intelligence (AI) framework is then deployed to perform data extraction, discerning and retrieving pertinent information. This AI-driven analysis furnishes us with an evaluative assessment of the deck's alignment with our specific search criteria, guiding our decision on its suitability for further consideration.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                                <h3 class="mb-0"> Startup Value Estimator (ML/AI) - TL </h3>
-                                <p> Employing the data submissions provided by the startup, our evaluation process encompasses an estimation of the intrinsic value of the venture. This assessment entails a comprehensive analysis of various determinants and variables. Subsequently, we undertake a judicious evaluation to ascertain the viability of investing in the startup, with the objective of ascertaining whether the opportunity aligns with our investment criteria and strategic objectives. </p>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p>Apart from programming: I am interested in Statistics, training and any kind of physical activity. At a young age, I enjoyed playing tennis, but my interests changed - now I am more into Fitness and healthy food. I still play tennis with my friends, but not at the high level as before.</p>
-                    <p>I was a part of a charity that provides free tennis camps for children (2012-2015) where I earned my tennis coach certificate.</p>
-                    <p>After living in a rustic, small town for the past 18 years, I was craving change and adventure. Ten years later, I’ve traveled to more places during college than in the first two decades of my life. My best travel experience was Indonesia in 2018 & Dubai in 2019.</p>
-                    <p class="mb-0">I love to read in my free time. My recommendation would be:</p>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-minus"></i></span>
-                            <u> 
-                                <a href="https://www.amazon.de/Blink-Power-Thinking-Without/dp/0141022043/ref=asc_df_0141022043/?tag=googshopde-21&linkCode=df0&hvadid=310696713837&hvpos=&hvnetw=g&hvrand=8433566838433947699&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000900&hvtargid=pla-453600884079&psc=1&th=1&psc=1&tag=&ref=&adgrpid=64755475434&hvpone=&hvptwo=&hvadid=310696713837&hvpos=&hvnetw=g&hvrand=8433566838433947699&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000900&hvtargid=pla-453600884079"> The Power of Thinking Without Thinking </a>
-                            </u>
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-minus"></i></span>
-                            <u> 
-                                <a href="https://www.amazon.de/Mindset-Updated-Changing-Fulfil-Potential/dp/147213995X/ref=sr_1_2?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=mindset&qid=1606653110&sr=8-2"> Mindset - Updated Edition: Changing The Way You think To Fulfil Your Potential  </a>
-                            </u>
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-minus"></i></span>
-                            <u> 
-                                <a href="https://www.amazon.com/How-win-Friends-Influence-People/dp/8189297813/ref=sr_1_4?crid=2ZQ200ZKZPWHT&dchild=1&keywords=how+to+win+friends+and+influence+people&qid=1606595191&sprefix=how+to+win+friends%2Caps%2C458&sr=8-4"> How to win Friends & Influence People </a>
-                            </u>
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-minus"></i></span>
-                            <u> 
-                                <a href="https://www.amazon.com/Intelligent-Investor-Definitive-Investing-Essentials/dp/0060555661/ref=sr_1_1?crid=3E5I2J6IMDOV3&dchild=1&keywords=intelligent+investment+by+graham&qid=1606596876&sprefix=inteligent+invest%2Caps%2C910&sr=8-1"> The Intelligent Investor </a>
-                            </u>
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-minus"></i></span>
-                            <u> 
-                                <a href="https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products/dp/1591847788/ref=pd_sbs_14_1/140-9681378-6328262?_encoding=UTF8&pd_rd_i=1591847788&pd_rd_r=7f1220da-69c5-4944-bb7f-cda3a7421a33&pd_rd_w=qSy55&pd_rd_wg=sjbk9&pf_rd_p=ed1e2146-ecfe-435e-b3b5-d79fa072fd58&pf_rd_r=XM4WV7SRGPXGHCVYNFEC&psc=1&refRID=XM4WV7SRGPXGHCVYNFEC"> Hooked: How to Build Habit-Forming Products </a>
-                            </u>
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-minus"></i></span>
-                            <u> 
-                                <a href="https://www.amazon.com/Think-Grow-Rich-Landmark-Bestseller/dp/1585424331/ref=bmx_3/140-9681378-6328262?_encoding=UTF8&pd_rd_i=1585424331&pd_rd_r=3e86e771-18af-40cb-8f06-50137fc5cc2e&pd_rd_w=sNXgf&pd_rd_wg=4Nt1c&pf_rd_p=4ebef4a1-dd04-4d00-b442-cfa31968b6de&pf_rd_r=CT8KNW4KVZQQN5JC4R8A&psc=1&refRID=CT8KNW4KVZQQN5JC4R8A"> Think and Grow Rich </a>
-                            </u>
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-minus"></i></span>
-                            <u> 
-                                <a href="https://www.amazon.com/Effective-Executive-Action-Journal-Getting/dp/0060832622/ref=sr_1_3?crid=35RYW4HGIXDGR&dchild=1&keywords=effective+executive&qid=1606597232&s=books&sprefix=effective+exe%2Cstripbooks-intl-ship%2C278&sr=1-3"> The Effective Executive in Action </a>
-                            </u>
-                        </li>
-                    </ul>
-
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-
-           
+            <div class="chip-grid">
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+            </div>
+          </div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo" onclick="navigateTo('home')">
+          <img src="./assets/icons/logo.svg" />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a
+              href="#home"
+              class="nav-link"
+              onclick="navigateTo('home'); return false;"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="nav-link"
+              onclick="navigateTo('home', 'skills'); return false;"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="nav-link"
+              onclick="navigateTo('home', 'projects'); return false;"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="nav-link"
+              onclick="navigateTo('home', 'experience'); return false;"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link"
+              onclick="navigateTo('home', 'contact'); return false;"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div class="page active" id="homePage">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-container">
+          <div class="hero-content">
+            <span class="hero-tag">🚀 Available for inspiring projects</span>
+            <h1>
+              Hi, I'm
+              <!-- <span class="gradient-text">Milan Kacar</span> -->
+              <span
+                class="decrypted gradient-text"
+                data-text="Milan Kacar"
+                data-animate-on="load"
+                data-speed="42"
+                data-max-iterations="7"
+                data-sequential="false"
+                data-reveal-direction="start"
+                data-use-original-chars-only="false"
+                data-view-delay="300"
+                data-characters="ABCDEFabcdefghijklmnopqrstuvwxyz!#$%+_()"
+                >Milan Kacar</span
+              >
+            </h1>
+            <h1 style="font-size: x-large">
+              AI Engineer | Data Scientist | Data Engineer
+            </h1>
+            <p>
+              AI-driven Software Engineer with over
+              <span id="years-exp"></span> years of experience in e-commerce and
+              FinTech. Geodesy graduate from TU Graz with a strong foundation in
+              mathematics, data analytics and academic research.
+            </p>
+            <div class="hero-buttons">
+              <a
+                href="#projects"
+                class="btn btn-primary"
+                onclick="navigateTo('home', 'projects'); return false;"
+                >View My Work</a
+              >
+              <a
+                href="#contact"
+                class="btn btn-secondary"
+                onclick="navigateTo('home', 'contact'); return false;"
+                >Get In Touch</a
+              >
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="profile-image">
+              <div class="profile-image-inner">
+                <img
+                  src="https://github.com/MilanKacar/CV/blob/master/assets/img/profile.jpg?raw=true"
+                />
+                <!-- Replace with: <img src="your-image.jpg" alt="Your Name"> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills">
+        <div class="container">
+          <div class="section-title">
+            <h2>Skills & <span class="gradient-text">Expertise</span></h2>
+            <p>
+              A comprehensive toolkit for building modern, AI-driven
+              applications
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- AI & Machine Learning -->
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img
+                  src="assets/icons/chip-brain-gradient.svg"
+                  alt="AI / Machine Learning icon"
+                />
+              </div>
+              <h3>AI / Machine Learning</h3>
+              <p>
+                Designing, training and deploying deep learning and classical ML
+                systems (research → production).
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">NLP & LLMs</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">Anomaly Detection</span>
+              </div>
+            </div>
+
+            <!-- Data Engineering & Warehousing -->
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img
+                  src="assets/icons/database-management-gradient.svg"
+                  alt="Data Engineering icon"
+                />
+              </div>
+              <h3>Data Engineering & Warehousing</h3>
+              <p>
+                Building ETL/ELT pipelines, unified data lakes and performant
+                data warehouses for analytics and ML.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">ETL / Data Lakes</span>
+                <span class="skill-tag">Apache Spark</span>
+                <span class="skill-tag">Databricks</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Looker</span>
+              </div>
+            </div>
+
+            <!-- MLOps & Cloud -->
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img
+                  src="assets/icons/cloud-upload-alt-gradient.svg"
+                  alt="MLOps & Cloud icon"
+                />
+              </div>
+              <h3>MLOps & Cloud</h3>
+              <p>
+                Production-ready model lifecycle: experiment tracking, serving,
+                monitoring and CI/CD for ML.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">MLflow / Kubeflow</span>
+                <span class="skill-tag">Model Serving (FastAPI, gRPC)</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">GCP / AWS</span>
+              </div>
+            </div>
+
+            <!-- Computer Vision & Research -->
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img
+                  src="assets/icons/mode-landscape-gradient.svg"
+                  alt="Computer Vision icon"
+                />
+              </div>
+              <h3>Computer Vision & Research</h3>
+              <p>
+                Applied research & projects (e.g., PV panel detection from
+                satellite imagery) using YOLOv5 and hybrid approaches.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">YOLOv5</span>
+                <span class="skill-tag">Satellite Imagery</span>
+                <span class="skill-tag">Image Preprocessing</span>
+                <span class="skill-tag">Cloud Compute</span>
+                <span class="skill-tag">Academic Research</span>
+              </div>
+            </div>
+
+            <!-- Software Engineering & Backend -->
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img
+                  src="assets/icons/code-window-gradient.svg"
+                  alt="Software Engineering icon"
+                />
+              </div>
+              <h3>Software Engineering & Backend</h3>
+              <p>
+                Architecting and building scalable services, APIs, and
+                automation for data-intensive systems.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">REST / gRPC</span>
+                <span class="skill-tag">Postgres / MongoDB</span>
+                <span class="skill-tag">CI/CD</span>
+              </div>
+            </div>
+
+            <!-- Geodesy & GIS -->
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img
+                  src="assets/icons/navigation-gradient.svg"
+                  alt="Geodesy & GIS icon"
+                />
+              </div>
+              <h3>Geodesy & GIS</h3>
+              <p>
+                Strong foundation from TU Graz: GNSS, surveying, spatial data
+                processing and map/database workflows.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">GNSS</span>
+                <span class="skill-tag">GIS</span>
+                <span class="skill-tag">Surveying</span>
+                <span class="skill-tag">3D Laser Scanning</span>
+              </div>
+            </div>
+
+            <!-- Programming & Tools -->
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img
+                  src="assets/icons/code-editing-gradient.svg"
+                  alt="Programming & Tooling icon"
+                />
+              </div>
+              <h3>Programming & Tooling</h3>
+              <p>
+                Polyglot engineer with strengths in scripting, systems and data
+                tooling used in production ML systems.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C / C++</span>
+                <span class="skill-tag">Java / Scala</span>
+                <span class="skill-tag">JavaScript / TypeScript</span>
+                <span class="skill-tag">Rust</span>
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">React</span>
+              </div>
+            </div>
+
+            <!-- Analytics & Product Impact -->
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img
+                  src="assets/icons/chart-histogram-gradient.svg"
+                  alt="Analytics & Product Impact icon"
+                />
+              </div>
+              <h3>Analytics & Product Impact</h3>
+              <p>
+                From forecasting &amp; BI to VC market intelligence — delivering
+                actionable insights and end-to-end AI features.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">Forecasting</span>
+                <span class="skill-tag">A/B Testing</span>
+                <span class="skill-tag">BI (Looker)</span>
+                <span class="skill-tag">Market Intelligence</span>
+              </div>
+            </div>
+
+            <!-- Teaching & Research -->
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img
+                  src="assets/icons/student-gradient.svg"
+                  alt="Teaching & Research icon"
+                />
+              </div>
+              <h3>Teaching & Research</h3>
+              <p>
+                Academic experience as TA and contributor to teaching materials:
+                sensor fusion, navigation and ML topics.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">Teaching Assistant</span>
+                <span class="skill-tag">Course Workshops</span>
+                <span class="skill-tag">Scientific Writing</span>
+                <span class="skill-tag">Experiment Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" style="background: rgba(102, 126, 234, 0.02)">
+        <div class="container">
+          <div class="section-title">
+            <h2>Featured <span class="gradient-text">Projects</span></h2>
+            <p>
+              A showcase of my latest work combining frontend excellence with AI
+              innovation
+            </p>
+          </div>
+          <div class="projects-grid">
+            <div
+              class="project-card"
+              data-href="./projects/ai-powered-chat-app.html"
+              role="link"
+              tabindex="0"
+              aria-label="Open AI-Powered Chat Application"
+            >
+              <div class="project-image">
+                <div class="project-placeholder">🤖</div>
+              </div>
+              <div class="project-content">
+                <h3>AI-Powered Chat Application</h3>
+                <p>
+                  A real-time chat platform with intelligent responses using
+                  GPT-4 and custom fine-tuned models.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">OpenAI</span>
+                  <span class="tech-tag">WebSocket</span>
+                  <span class="tech-tag">Node.js</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card" onclick="navigateTo('project2')">
+              <div class="project-image">
+                <div class="project-placeholder">📊</div>
+              </div>
+              <div class="project-content">
+                <h3>Data Visualization Dashboard</h3>
+                <p>
+                  Interactive analytics dashboard with ML-powered predictions
+                  and insights.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Vue.js</span>
+                  <span class="tech-tag">D3.js</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">TensorFlow</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card" onclick="navigateTo('project3')">
+              <div class="project-image">
+                <div class="project-placeholder">🎨</div>
+              </div>
+              <div class="project-content">
+                <h3>AI Image Generator</h3>
+                <p>
+                  Web-based image generation tool leveraging Stable Diffusion.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">Stable Diffusion</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">AWS</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card" onclick="navigateTo('project4')">
+              <div class="project-image">
+                <div class="project-placeholder">🔍</div>
+              </div>
+              <div class="project-content">
+                <h3>Smart Search Engine</h3>
+                <p>
+                  Semantic search platform using vector embeddings and RAG
+                  architecture.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">LangChain</span>
+                  <span class="tech-tag">Pinecone</span>
+                  <span class="tech-tag">OpenAI</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card" onclick="navigateTo('project5')">
+              <div class="project-image">
+                <div class="project-placeholder">🎯</div>
+              </div>
+              <div class="project-content">
+                <h3>E-commerce Platform</h3>
+                <p>
+                  Full-stack e-commerce solution with AI-powered product
+                  recommendations.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Stripe</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card" onclick="navigateTo('project6')">
+              <div class="project-image">
+                <div class="project-placeholder">💬</div>
+              </div>
+              <div class="project-content">
+                <h3>Voice Assistant Interface</h3>
+                <p>
+                  Multimodal AI assistant with speech recognition and natural
+                  language processing.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Vue.js</span>
+                  <span class="tech-tag">Whisper</span>
+                  <span class="tech-tag">GPT-4</span>
+                  <span class="tech-tag">WebRTC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience">
+        <div class="container">
+          <div class="section-title">
+            <h2>Work <span class="gradient-text">Experience</span></h2>
+            <h1 style="font-size: large">
+              My professional journey in tech and
+              <span class="gradient-text">AI</span>
+            </h1>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2021 - Present</div>
+                <h3>AI Engineer | Data Scientist</h3>
+                <h4>Niceshops GmbH</h4>
+                <p>
+                  Leading the development of AI-driven features for web
+                  applications and acting as the primary technical authority for
+                  AI initiatives across the company. Designed and implemented
+                  scalable, in-house software solutions that significantly
+                  improve operational efficiency and employee productivity.
+                  Experienced in data analytics and data engineering, with a
+                  demonstrated ability to deliver data-driven insights and
+                  automation solutions. Regularly conduct internal workshops and
+                  training sessions on Looker and data analytics, promoting a
+                  culture of continuous learning and technical excellence.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2022 - Present</div>
+                <h3>CTO | Full-stack Developer</h3>
+                <h4>Gateway Ventures</h4>
+                <p>
+                  Lead the implementation of innovative AI-driven projects,
+                  including FFG-funded initiatives that emphasize technical
+                  novelty. Develop intelligent applications using predictive
+                  algorithms, sentiment analysis, and wide varyati of
+                  technlogies. Manage project planning, technical strategy, and
+                  cross-functional coordination as part of the leadership team.
+                  Build and maintain React and Python web applications,
+                  implement CI/CD pipelines, and improve performance by 60%.
+                  Gain deep insight into venture capital processes and the
+                  intersection of technology and investment strategy.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2019 - 2022</div>
+                <h3>Software Engineer</h3>
+                <h4>TU Graz, VSI</h4>
+                <p>
+                  Working on various projects in Automation, Statistics &
+                  Geoinformatics in the Automotive industry.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2021 - 2022</div>
+                <h3>Teaching Assistant</h3>
+                <h4>TU Graz, IFG</h4>
+                <p>
+                  Teaching the students about Indoor navigation, filtering,
+                  sensor fusion.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2019 - 2019</div>
+                <h3>Survey Engineer</h3>
+                <h4>Geodata GmbH</h4>
+                <p>Tunnel survey | 3D Laser scanner measurements</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-icons-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Let's <span class="gradient-text">Connect</span></h2>
+            <p>Interested in working together? Let's make something amazing!</p>
+          </div>
+
+          <div class="contact-icons">
+            <!-- Email -->
+            <a
+              class="icon-btn"
+              href="mailto:milankacar@live.com"
+              aria-label="Email Milan"
+              title="Email"
+            >
+              <img
+                src="./assets/icons/envelope-grad.svg"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              class="icon-btn"
+              href="https://linkedin.com/in/milan-kacar"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <img
+                src="./assets/icons/linkedin-grad.svg"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+
+            <!-- GitHub -->
+            <a
+              class="icon-btn"
+              href="https://github.com/MilanKacar"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <img src="./assets/icons/github-grad.svg" alt="" loading="lazy" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <p>
+            &copy; <span id="current-year"></span> Milan Kacar. Built with
+            passion. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Project 2: Data Visualization Dashboard -->
+    <div class="page" id="project2Page">
+      <div class="project-detail">
+        <div class="container">
+          <a
+            href="#"
+            class="back-button"
+            onclick="navigateTo('home', 'projects'); return false;"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              Data Visualization <span class="gradient-text">Dashboard</span>
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Role:</strong> Full Stack Developer
+              </div>
+              <div class="meta-item"><strong>Duration:</strong> 4 months</div>
+              <div class="meta-item"><strong>Year:</strong> 2024</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              An enterprise-grade analytics dashboard that processes massive
+              datasets and provides actionable insights through beautiful,
+              interactive visualizations powered by machine learning
+              predictions.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-secondary">View Code</a>
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <div class="project-placeholder">📊</div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Overview</span></h2>
+            <p>
+              This dashboard transforms complex data into intuitive
+              visualizations, enabling stakeholders to make data-driven
+              decisions. Built with Vue.js and D3.js, it handles millions of
+              data points with smooth performance.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Features</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>📈 Interactive Charts</h3>
+                <p>
+                  Dynamic charts with zoom, pan, and drill-down capabilities.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🤖 ML Predictions</h3>
+                <p>TensorFlow-powered forecasting and trend analysis.</p>
+              </div>
+              <div class="feature-item">
+                <h3>⚡ Real-Time Updates</h3>
+                <p>Live data streaming with automatic chart updates.</p>
+              </div>
+              <div class="feature-item">
+                <h3>📤 Export Options</h3>
+                <p>Export visualizations as PDF, PNG, or CSV.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <div class="gallery-placeholder">📊</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">📈</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">💹</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <p>
+            &copy; <span id="current-year"></span> Milan Kacar. Built with
+            passion and code. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Project 3: AI Image Generator -->
+    <div class="page" id="project3Page">
+      <div class="project-detail">
+        <div class="container">
+          <a
+            href="#"
+            class="back-button"
+            onclick="navigateTo('home', 'projects'); return false;"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>AI Image <span class="gradient-text">Generator</span></h1>
+            <div class="project-meta">
+              <div class="meta-item"><strong>Role:</strong> AI Engineer</div>
+              <div class="meta-item"><strong>Duration:</strong> 5 months</div>
+              <div class="meta-item"><strong>Year:</strong> 2023</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              A powerful web-based image generation platform leveraging Stable
+              Diffusion with custom training capabilities, style transfer, and
+              real-time editing features.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-secondary">View Code</a>
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <div class="project-placeholder">🎨</div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Overview</span></h2>
+            <p>
+              This platform democratizes AI art creation, allowing users to
+              generate stunning images from text prompts. Features include
+              custom model fine-tuning, style mixing, and an intuitive interface
+              built with Next.js.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Features</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>🎨 Text-to-Image</h3>
+                <p>Generate images from detailed text descriptions.</p>
+              </div>
+              <div class="feature-item">
+                <h3>🔄 Style Transfer</h3>
+                <p>Apply artistic styles to existing images.</p>
+              </div>
+              <div class="feature-item">
+                <h3>⚙️ Custom Training</h3>
+                <p>Fine-tune models on custom datasets.</p>
+              </div>
+              <div class="feature-item">
+                <h3>✨ Real-Time Preview</h3>
+                <p>See generation progress in real-time.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <div class="gallery-placeholder">🎨</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">🖼️</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">✨</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <p>
+            &copy; <span id="current-year"></span> Milan Kacar. Built with
+            passion and code. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Project 4: Smart Search Engine -->
+    <div class="page" id="project4Page">
+      <div class="project-detail">
+        <div class="container">
+          <a
+            href="#"
+            class="back-button"
+            onclick="navigateTo('home', 'projects'); return false;"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>Smart Search <span class="gradient-text">Engine</span></h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Role:</strong> Lead AI Engineer
+              </div>
+              <div class="meta-item"><strong>Duration:</strong> 6 months</div>
+              <div class="meta-item"><strong>Year:</strong> 2023</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              A semantic search platform that understands natural language
+              queries and delivers highly relevant results using vector
+              embeddings and RAG architecture.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-secondary">View Code</a>
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <div class="project-placeholder">🔍</div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Overview</span></h2>
+            <p>
+              This search engine goes beyond keyword matching to understand user
+              intent. Using LangChain and Pinecone vector database, it provides
+              contextually relevant results with natural language understanding.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Features</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>🧠 Semantic Understanding</h3>
+                <p>Understands query intent beyond keywords.</p>
+              </div>
+              <div class="feature-item">
+                <h3>⚡ Lightning Fast</h3>
+                <p>Sub-second response times with vector search.</p>
+              </div>
+              <div class="feature-item">
+                <h3>🎯 Contextual Results</h3>
+                <p>RAG-powered contextually relevant answers.</p>
+              </div>
+              <div class="feature-item">
+                <h3>🔄 Auto-Learning</h3>
+                <p>Improves with user interaction patterns.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <div class="gallery-placeholder">🔍</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">📝</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">🎯</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <p>
+            &copy; <span id="current-year"></span> Milan Kacar. Built with
+            passion and code. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Project 5: E-commerce Platform -->
+    <div class="page" id="project5Page">
+      <div class="project-detail">
+        <div class="container">
+          <a
+            href="#"
+            class="back-button"
+            onclick="navigateTo('home', 'projects'); return false;"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>E-commerce <span class="gradient-text">Platform</span></h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Role:</strong> Full Stack Developer
+              </div>
+              <div class="meta-item"><strong>Duration:</strong> 8 months</div>
+              <div class="meta-item"><strong>Year:</strong> 2023</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              A full-featured e-commerce solution with AI-powered
+              recommendations, dynamic pricing, and seamless checkout experience
+              built for scale.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-secondary">View Code</a>
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <div class="project-placeholder">🎯</div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Overview</span></h2>
+            <p>
+              A modern e-commerce platform that combines beautiful design with
+              powerful features. Built with React and Node.js, it handles
+              thousands of transactions daily with 99.9% uptime.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Features</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>🛒 Smart Cart</h3>
+                <p>AI-powered product recommendations.</p>
+              </div>
+              <div class="feature-item">
+                <h3>💳 Secure Payments</h3>
+                <p>Stripe integration with fraud detection.</p>
+              </div>
+              <div class="feature-item">
+                <h3>📦 Order Tracking</h3>
+                <p>Real-time shipment tracking.</p>
+              </div>
+              <div class="feature-item">
+                <h3>📱 Mobile First</h3>
+                <p>Responsive design optimized for mobile.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <div class="gallery-placeholder">🛍️</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">💳</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">📦</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <p>
+            &copy; <span id="current-year"></span> Milan Kacar. Built with
+            passion and code. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Project 6: Voice Assistant Interface -->
+    <div class="page" id="project6Page">
+      <div class="project-detail">
+        <div class="container">
+          <a
+            href="#"
+            class="back-button"
+            onclick="navigateTo('home', 'projects'); return false;"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              Voice Assistant <span class="gradient-text">Interface</span>
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item"><strong>Role:</strong> AI Engineer</div>
+              <div class="meta-item"><strong>Duration:</strong> 7 months</div>
+              <div class="meta-item"><strong>Year:</strong> 2024</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              A multimodal AI assistant featuring speech recognition, natural
+              language processing, and voice synthesis for seamless human-AI
+              interaction.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-secondary">View Code</a>
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <div class="project-placeholder">💬</div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Overview</span></h2>
+            <p>
+              An advanced voice assistant that combines Whisper for speech
+              recognition, GPT-4 for understanding, and natural voice synthesis.
+              Built with Vue.js and WebRTC for real-time audio processing.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Features</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>🎤 Speech Recognition</h3>
+                <p>Accurate transcription using Whisper AI.</p>
+              </div>
+              <div class="feature-item">
+                <h3>🧠 NLP Processing</h3>
+                <p>GPT-4 powered intent understanding.</p>
+              </div>
+              <div class="feature-item">
+                <h3>🔊 Voice Synthesis</h3>
+                <p>Natural-sounding text-to-speech.</p>
+              </div>
+              <div class="feature-item">
+                <h3>🌐 Multi-Platform</h3>
+                <p>Works on web, mobile, and desktop.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <div class="gallery-placeholder">🎤</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">💬</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">🔊</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <p>
+            &copy; <span id="current-year"></span> Milan Kacar. Built with
+            passion and code. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
