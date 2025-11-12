@@ -21,7 +21,6 @@ window.addEventListener('load', function () {
 (function () {
   const btn = document.getElementById('backBtn');
   if (!btn) return;
-  if (!loader) return;
   try {
     const sameOriginReferrer =
       document.referrer &&
