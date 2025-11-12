@@ -33,5 +33,6 @@ window.addEventListener('load', function () {
       });
     }
   } catch {
+
   }
 })();
