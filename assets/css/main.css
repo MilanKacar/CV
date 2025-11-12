@@ -32,6 +32,9 @@ main {
   padding-top: 80px;
 }
 
+.hidden { display: none !important; }
+.visible { visibility: visible; opacity: 1; }
+
 /* Loader Styles */
 .loader-container {
   position: fixed;
