@@ -1,2 +1,2 @@
 # CV
-Designed by: https://github.com/StartBootstrap/startbootstrap-resume
+Designed by: Milan Kacar
