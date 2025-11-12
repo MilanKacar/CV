@@ -20,7 +20,9 @@ window.addEventListener('load', function () {
 // (Optional) smart Back to Projects
 (function () {
   const btn = document.getElementById('backBtn');
+  const loader = document.getElementById('loader');
   if (!btn) return;
+  if (!loader) return;
   try {
     const sameOriginReferrer =
       document.referrer &&
@@ -30,6 +32,7 @@ window.addEventListener('load', function () {
         e.preventDefault();
         history.back();
       });
+      loader.classList.add('hidden');
     }
   } catch {}
 })();
