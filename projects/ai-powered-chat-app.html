@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Powered Chat Application – Milan Kacar</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/page.js"></script>
+    <script defer src="../assets/js/modal.js"></script>
+
+    <!-- SEO / Open Graph -->
+    <meta
+      name="description"
+      content="Real-time AI chat platform with GPT-4, fine-tuned models, analytics, and multi-language support."
+    />
+    <meta
+      property="og:title"
+      content="AI-Powered Chat Application – Milan Kacar"
+    />
+    <meta
+      property="og:description"
+      content="A sophisticated real-time chat platform leveraging GPT-4 and custom models."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader-container" id="loader" style="display: flex">
+      <div class="chip">
+        <div class="chip-outer">
+          <div class="chip-inner">
+            <div class="chip-circuits">
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+            </div>
+            <div class="chip-grid">
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a href="../index.html"> <img src="../assets/icons/logo.svg" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li>
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+          </li>
+          <li>
+            <a href="../index.html#experience" class="nav-link">Experience</a>
+          </li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main (no .page class so it's not hidden by home CSS) -->
+    <main>
+      <div class="project-detail">
+        <div class="container">
+          <!-- Back link kept EXACTLY as requested -->
+          <a href="../index.html#projects" class="back-button" id="backBtn"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              AI-Powered <span class="gradient-text">Chat Application</span>
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item"><strong>Role:</strong> Lead Developer</div>
+              <div class="meta-item"><strong>Duration:</strong> 3 months</div>
+              <div class="meta-item"><strong>Year:</strong> 2024</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              A sophisticated real-time chat platform that leverages GPT-4 and
+              custom fine-tuned models to provide intelligent, context-aware
+              responses. The application features sentiment analysis,
+              conversation summarization, and multi-language support.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-secondary" data-view-code>View Code</a>
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <div class="project-placeholder">🤖</div>
+            <!-- Replace with: <img src="../assets/img/project1-hero.jpg" alt="Project Screenshot"> -->
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Overview</span></h2>
+            <p>
+              This chat application represents the cutting edge of
+              conversational AI technology. Built with React and powered by
+              OpenAI's GPT-4, it provides users with an intelligent assistant
+              capable of understanding context, maintaining conversation
+              history, and adapting to user preferences over time.
+            </p>
+            <p>
+              The platform includes advanced features such as real-time typing
+              indicators, message threading, file sharing, and seamless
+              integration with various AI models. The backend is built with
+              Node.js and WebSocket technology to ensure low-latency
+              communication.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Features</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>🎯 Context-Aware AI</h3>
+                <p>
+                  Maintains conversation context across multiple messages for
+                  more meaningful interactions.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>💬 Real-Time Communication</h3>
+                <p>
+                  WebSocket-powered instant messaging with typing indicators and
+                  read receipts.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🎨 Sentiment Analysis</h3>
+                <p>
+                  Analyzes user sentiment to adjust response tone and provide
+                  empathetic replies.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🌍 Multi-Language Support</h3>
+                <p>
+                  Automatic language detection and translation for global
+                  accessibility.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>📊 Conversation Analytics</h3>
+                <p>
+                  Track engagement metrics and gain insights from conversation
+                  patterns.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🔒 Privacy First</h3>
+                <p>
+                  End-to-end encryption and secure data handling for user
+                  privacy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Technical <span class="gradient-text">Stack</span></h2>
+            <p>
+              <strong>Frontend:</strong> React 18, TypeScript, Tailwind CSS,
+              Framer Motion for animations
+            </p>
+            <p>
+              <strong>Backend:</strong> Node.js, Express, WebSocket (Socket.io),
+              Redis for caching
+            </p>
+            <p>
+              <strong>AI/ML:</strong> OpenAI GPT-4 API, Custom fine-tuned
+              models, LangChain for orchestration
+            </p>
+            <p>
+              <strong>Database:</strong> PostgreSQL for user data, MongoDB for
+              conversation logs
+            </p>
+            <p>
+              <strong>Infrastructure:</strong> AWS (EC2, S3, CloudFront),
+              Docker, GitHub Actions CI/CD
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Project <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <div class="gallery-placeholder">💬</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">📱</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">🎨</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-placeholder">📊</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Challenges & <span class="gradient-text">Solutions</span></h2>
+            <p>
+              <strong>Challenge:</strong> Managing real-time state updates
+              across multiple users while maintaining conversation context.
+            </p>
+            <p>
+              <strong>Solution:</strong> Implemented a robust state management
+              system using Redux with WebSocket middleware, combined with
+              optimistic UI updates for a seamless user experience.
+            </p>
+            <br />
+            <p>
+              <strong>Challenge:</strong> Handling API rate limits and managing
+              costs for GPT-4 API calls.
+            </p>
+            <p>
+              <strong>Solution:</strong> Developed an intelligent caching layer
+              with Redis and implemented request batching to reduce API calls by
+              60%.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Results & <span class="gradient-text">Impact</span></h2>
+            <p>
+              The AI-powered chat application has been successfully deployed and
+              is being used by over 10,000 active users. Key achievements
+              include:
+            </p>
+            <p>• 95% user satisfaction rate based on feedback surveys</p>
+            <p>• Average response time under 500ms for real-time messages</p>
+            <p>
+              • 40% reduction in customer support costs for client companies
+            </p>
+            <p>• Featured in TechCrunch and ProductHunt with 500+ upvotes</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="codeModal"
+      class="mk-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mkModalTitle"
+      aria-describedby="mkModalDesc"
+      aria-hidden="true"
+    >
+      <div class="mk-modal__backdrop" data-close></div>
+
+      <div class="mk-modal__card" role="document">
+        <button
+          class="mk-modal__close"
+          type="button"
+          aria-label="Close"
+          data-close
+        >
+          ✕
+        </button>
+
+        <h2 id="mkModalTitle" class="mk-modal__title">
+          Sorry—this code is private
+        </h2>
+        <p id="mkModalDesc" class="mk-modal__text">
+          This project’s source is <strong>commercial and confidential</strong>,
+          so it can’t be open-sourced.<br />
+          If you’d like to discuss an architectural overview or a demo, I’m
+          happy to share more details.
+        </p>
+
+        <div class="mk-modal__actions">
+          <a href="../index.html#contact" class="btn btn-primary">Contact me</a>
+          <button type="button" class="btn btn-secondary" data-close>
+            Got it
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="current-year"></span> Milan Kacar. Built with passion. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
