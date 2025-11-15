@@ -1,4 +1,7 @@
 (function () {
+  // 👇 add this at the top
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
   const parseBool = (v, f = false) =>
     v == null ? f : String(v).toLowerCase() === 'true';
   const parseIntSafe = (v, f) => {
@@ -219,8 +222,16 @@
     };
   }
 
-  // ❗ no auto-init here — we control init from MAIN SCRIPT after loader
   function attachAllOnce(root = document) {
+
+    if (isMobile) {
+      root.querySelectorAll('.decrypted').forEach((el) => {
+        el.classList.remove('decrypted');
+      });
+      return;
+    }
+
+    // Desktop / tablet → normal behavior
     root.querySelectorAll('.decrypted').forEach((el) => {
       if (el.dataset.decInit === '1') return; // guard against double-wrapping
       attachDecryptedText(el);
