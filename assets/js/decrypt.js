@@ -1,5 +1,5 @@
 (function () {
-  // 👇 add this at the top
+
   const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
   const parseBool = (v, f = false) =>
