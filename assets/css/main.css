@@ -576,7 +576,6 @@ nav {
 }
 
 .hero h1 {
-  font-size: 64px;
   margin-bottom: 20px;
   line-height: 1.1;
 }
@@ -1151,6 +1150,14 @@ footer {
     text-align: center;
   }
 
+  h1#intro-my-name {
+    font-size: 36px;
+  }
+
+  h1#job-description-h1 {
+    font-size: 22px;
+  }
+
   .hero-content {
     order: 2;
   }
@@ -1460,3 +1467,11 @@ footer {
 .dec-encrypted {
   color: #6366f1;
 } /* indigo-500 */
+
+#intro-my-name {
+  font-size: 56px;
+}
+
+#job-description-h1 {
+  font-size: 24px;
+}
