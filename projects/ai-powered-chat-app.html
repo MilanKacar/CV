@@ -10,6 +10,7 @@
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/page.js"></script>
     <script defer src="../assets/js/modal.js"></script>
+    <script defer type="text/javascript" src="./assets/js/navbar.js"></script>
 
     <!-- SEO / Open Graph -->
     <meta
@@ -64,21 +65,61 @@
     </div>
 
     <!-- Nav -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
     <nav>
       <div class="nav-container">
-        <div class="logo">
-          <a href="../index.html"> <img src="../assets/icons/logo.svg" /></a>
+        <div class="logo" onclick="navigateTo('home')">
+          <img src="./assets/icons/logo.svg" />
         </div>
-        <ul class="nav-links">
-          <li><a href="../index.html#home" class="nav-link">Home</a></li>
-          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
           <li>
-            <a href="../index.html#projects" class="nav-link">Projects</a>
+            <a
+              href="#home"
+              class="nav-link active"
+              onclick="handleNavClick(event, 'home')"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="../index.html#experience" class="nav-link">Experience</a>
+            <a
+              href="#skills"
+              class="nav-link"
+              onclick="handleNavClick(event, 'skills')"
+              >Skills</a
+            >
           </li>
-          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+          <li>
+            <a
+              href="#projects"
+              class="nav-link"
+              onclick="handleNavClick(event, 'projects')"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="nav-link"
+              onclick="handleNavClick(event, 'experience')"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link"
+              onclick="handleNavClick(event, 'contact')"
+              >Contact</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
