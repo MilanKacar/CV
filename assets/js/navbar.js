@@ -15,8 +15,8 @@ function toggleMenu() {
 hamburger.addEventListener('click', toggleMenu);
 navOverlay.addEventListener('click', toggleMenu);
 
-function handleNavClick(event, section) {
-  if (!project_page) event.preventDefault();
+function handleNavClick(event, section, projectPage=false) {
+  if (!projectPage) event.preventDefault();
 
   // Close mobile menu if open
   if (navLinks.classList.contains('active')) {
