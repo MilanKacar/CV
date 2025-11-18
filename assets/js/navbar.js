@@ -18,6 +18,21 @@ navOverlay.addEventListener('click', toggleMenu);
 function handleNavClick(event, section) {
   event.preventDefault();
 
+  try {
+    const btn = document.getElementById('backBtn');
+    const ref = document.referrer;
+    const sameOriginReferrer = ref && new URL(ref).origin === location.origin;
+
+    if (sameOriginReferrer) {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        history.back();
+      });
+    }
+  } catch {
+    // ignore referrer URL parse errors
+  }
+
   // Close mobile menu if open
   if (navLinks.classList.contains('active')) {
     toggleMenu();
