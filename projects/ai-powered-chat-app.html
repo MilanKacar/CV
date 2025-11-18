@@ -70,9 +70,8 @@
 
     <nav>
       <div class="nav-container">
-        <div class="logo"">
-          <a href="../">
-          <img src="../assets/icons/logo.svg" />
+        <div class="logo" onclick="navigateTo('home')">
+          <img src="./assets/icons/logo.svg" />
         </div>
 
         <div class="hamburger" id="hamburger">
@@ -83,19 +82,44 @@
 
         <ul class="nav-links" id="navLinks">
           <li>
-            <a href="../#home" class="nav-link">Home</a>
+            <a
+              href="../#home"
+              class="nav-link active"
+              onclick="handleNavClick(event, 'home')"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="../#skills" class="nav-link">Skills</a>
+            <a
+              href="../#skills"
+              class="nav-link"
+              onclick="handleNavClick(event, 'skills')"
+              >Skills</a
+            >
           </li>
           <li>
-            <a href="../#projects" class="nav-link">Projects</a>
+            <a
+              href="../#projects"
+              class="nav-link"
+              onclick="handleNavClick(event, 'projects')"
+              >Projects</a
+            >
           </li>
           <li>
-            <a href="../#experience" class="nav-link">Experience</a>
+            <a
+              href="../#experience"
+              class="nav-link"
+              onclick="handleNavClick(event, 'experience')"
+              >Experience</a
+            >
           </li>
           <li>
-            <a href="../#contact" class="nav-link">Contact</a>
+            <a
+              href="../#contact"
+              class="nav-link"
+              onclick="handleNavClick(event, 'contact')"
+              >Contact</a
+            >
           </li>
         </ul>
       </div>
