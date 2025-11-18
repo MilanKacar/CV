@@ -70,9 +70,13 @@
 
     <nav>
       <div class="nav-container">
-        <div class="logo"
-             href="../#home" 
-             onclick="handleNavClick(event, 'home', true)">
+        <div class="logo">
+          <a
+            href="../#home" 
+            class="nav-link active"
+            onclick="handleNavClick(event, 'home', true)"
+            >Home</a
+          >
           <img src="../assets/icons/logo.svg" />
         </div>
 
@@ -85,7 +89,7 @@
         <ul class="nav-links" id="navLinks">
           <li>
             <a
-              href="javascript:history.back()"
+              href="../#home"
               class="nav-link active"
               onclick="handleNavClick(event, 'home', true)"
               >Home</a
@@ -111,7 +115,7 @@
             <a
               href="../#experience"
               class="nav-link"
-              onclick="handleNavClick(event, 'experience')"
+              onclick="handleNavClick(event, 'experience', true)"
               >Experience</a
             >
           </li>
