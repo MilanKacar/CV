@@ -140,7 +140,6 @@
     function startScramble() {
       if (interval) clearInterval(interval);
       isScrambling = true;
-      isHovering = true; // Ensure this is set
       currentIteration = 0;
       interval = setInterval(() => {
         if (sequential) {
@@ -181,8 +180,8 @@
     // initial render
     renderVisible();
 
-    // HOVER - only add hover listeners if animateOn includes 'hover' or 'both' (but NOT 'load')
-    if (animateOn === 'hover' || animateOn === 'both') {
+    // HOVER
+    if (animateOn === 'hover' || animateOn === 'both' || animateOn === 'load') {
       wrapper.addEventListener('mouseenter', () => {
         isHovering = true;
         startScramble();
@@ -200,7 +199,8 @@
           for (const entry of entries) {
             if (entry.isIntersecting && !hasAnimated) {
               hasAnimated = true;
-              setTimeout(startScramble, baseDelay);
+              isHovering = true; // reuse same path
+              setTimeout(startScramble, baseDelay); // respect data-delay on view too
             }
           }
         },
@@ -209,9 +209,8 @@
       io.observe(wrapper);
     }
 
-    // LOAD — start as soon as we initialize (only for 'load' animateOn)
+    // LOAD — start as soon as we initialize (we'll init after loader hides)
     if (animateOn === 'load') {
-      hasAnimated = true; // Prevent re-animation
       setTimeout(startScramble, baseDelay);
     }
 
