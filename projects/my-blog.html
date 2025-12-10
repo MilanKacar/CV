@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Knowledge Nexus – Milan Kacar</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/page.js"></script>
+    <script defer src="../assets/js/modal.js"></script>
+    <script defer src="../assets/js/navbar.js"></script>
+    <script defer src="../assets/js/project.js"></script>
+    <meta
+      name="description"
+      content="A professional knowledge repository covering AI, Quant Finance, Algorithmic Engineering, and Global Macroeconomics."
+    />
+    <meta property="og:title" content="The Knowledge Nexus – Milan Kacar" />
+    <meta
+      property="og:description"
+      content="120+ deep-dive articles analyzing the intersection of Technology, Finance, and Future Trends."
+    />
+    <meta property="og:type" content="website" />
+
+    <style>
+      /* Specific styles for the blog list to keep it tidy */
+      .blog-category-container {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .blog-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+      }
+
+      .blog-list li {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-family: 'Fira Code', monospace;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .blog-list li:last-child {
+        border-bottom: none;
+      }
+
+      .blog-list li::before {
+        content: '📄';
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+
+      .leetcode-scroll-box {
+        max-height: 400px;
+        overflow-y: auto;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+      }
+
+      /* Custom scrollbar for the list */
+      .leetcode-scroll-box::-webkit-scrollbar {
+        width: 8px;
+      }
+      .leetcode-scroll-box::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .leetcode-scroll-box::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-container" id="loader" style="display: flex">
+      <div class="chip">
+        <div class="chip-outer">
+          <div class="chip-inner">
+            <div class="chip-circuits">
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+            </div>
+            <div class="chip-grid">
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a
+            href="../#home"
+            class="nav-link active"
+            onclick="handleNavClick(event, 'home', true)"
+          ></a>
+          <img src="../assets/icons/logo.svg" alt="Logo" />
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a
+              href="../#home"
+              class="nav-link"
+              onclick="handleNavClick(event, 'home', true)"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#skills"
+              class="nav-link"
+              onclick="handleNavClick(event, 'skills', true)"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#projects"
+              class="nav-link active"
+              onclick="handleNavClick(event, 'projects', true)"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#experience"
+              class="nav-link"
+              onclick="handleNavClick(event, 'experience', true)"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#contact"
+              class="nav-link"
+              onclick="handleNavClick(event, 'contact', true)"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="https://milankacar.github.io/" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="project-detail">
+        <div class="container">
+          <a href="../#projects" class="back-button" id="backBtn"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              The Engineering <span class="gradient-text">Chronicles</span>
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Project:</strong> Professional Blog
+              </div>
+              <div class="meta-item">
+                <strong>Volume:</strong> 120+ Articles
+              </div>
+              <div class="meta-item">
+                <strong>Focus:</strong> AI, Quant Finance, Algorithms
+              </div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              I don't just consume information; I decode it. <br />
+              This blog is my living documentation of the rapidly shifting tech
+              landscape. From the mathematical foundations of
+              <strong>Quantitative Finance</strong> to the geopolitical
+              implications of <strong>AGI</strong>, I analyze trends, dissect
+              algorithms, and write the stories that define my professional
+              evolution.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://milankacar.github.io/"
+                target="_blank"
+                class="btn btn-primary"
+                >Read the Blog</a
+              >
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <img
+              src="https://raw.githubusercontent.com/MilanKacar/milankacar.github.io/master/images/homepage-preview.png"
+              alt="Milan Kacar Blog Homepage Preview"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+                cursor: pointer;
+              "
+              onclick="openLightbox(this)"
+            />
+          </div>
+
+          <div class="project-section">
+            <h2>Why I <span class="gradient-text">Write</span></h2>
+            <p>
+              In an era of information overload, clarity is power. I use this
+              platform to synthesize complex global situations and technical
+              breakthroughs into actionable insights.
+            </p>
+            <p>
+              Whether it's dissecting the latest
+              <strong>Andrew Ng machine learning course</strong>, predicting the
+              rise of <strong>AI Agents</strong>, or analyzing the
+              <strong>Changing World Order</strong>, my goal is to stay ahead of
+              the curve. This isn't just a hobby; it is how I sharpen my
+              analytical edge and demonstrate deep domain expertise.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Domains</span></h2>
+
+            <div class="blog-category-container">
+              <h3>🤖 AI, LLMs & Futurism</h3>
+              <p>Tracking the evolution from basic ML to Agents and AGI.</p>
+              <ul class="blog-list">
+                <li>
+                  #124 When AGI Finds Fire — A Story About Energy, Evolution and
+                  the Future of Intelligence 🔥🤖⚡
+                </li>
+                <li>
+                  #123 Why This Is the Decade of Agents (Not the Year) 🧠🚀
+                </li>
+                <li>
+                  #117 🤯🤖 The AI Rollercoaster of 2025: A Week of Insane
+                  Innovations! 🚀🧠
+                </li>
+                <li>
+                  #52 Finally 🏁 - Master Thesis 🎓 : 🌞 Harnessing the Power of
+                  AI for Solar Panel Detection 🌍
+                </li>
+                <li>
+                  #32 Unraveling the Architectures of Large Language Models
+                  (LLMs) 🧠🤖
+                </li>
+                <li>#7 🚀 BloombergGPT: A Giant Leap for Finance NLP 💸</li>
+              </ul>
+            </div>
+
+            <div class="blog-category-container">
+              <h3>📈 Quantitative Finance & Math</h3>
+              <p>
+                Applying advanced mathematics to market predictions and asset
+                pricing.
+              </p>
+              <ul class="blog-list">
+                <li>
+                  #121 5 U.S. Stocks That Could Double in a Year — And Why I'm
+                  Betting on Them 🚀🧠
+                </li>
+                <li>
+                  #78 📊 Mastering Bayes' Theorem in Finance: A Comprehensive
+                  Guide 💹
+                </li>
+                <li>
+                  #25 Unlocking the Power of Markov Chains in Finance 🚀💸
+                </li>
+                <li>
+                  #16 📊 Finite Difference Methods in Finance: Pricing Stock
+                  Options with Python 🐍💹
+                </li>
+                <li>
+                  #15 🎲 Monte Carlo Simulation in Finance: A Deep Dive 🚀
+                </li>
+                <li>#10 PCA as a Superpower in Finance 🚀</li>
+              </ul>
+            </div>
+
+            <div class="blog-category-container">
+              <h3>🌍 World Order & Strategy</h3>
+              <p>
+                Analyzing history, economy, and business operations to predict
+                the future.
+              </p>
+              <ul class="blog-list">
+                <li>
+                  #119 🌍 The Changing World Order: 500 Years of Empire Cycles!
+                  🚀🧠
+                </li>
+                <li>#116 ☁️ The UK Wants a Backdoor into Your iCloud 🚀🧠</li>
+                <li>
+                  #39 The Overhype of AI in Business: Venture Capital Trends 📉
+                </li>
+                <li>#3 🚨 Why Early Data Management is Crucial 🚀</li>
+                <li>
+                  #9 How to Build Habit-Forming Products: Lessons from Hooked 🚀
+                </li>
+              </ul>
+            </div>
+
+            <div class="blog-category-container">
+              <h3>💻 The Engineering Grind (Algorithms)</h3>
+              <p>
+                Consistency is key. I have documented the solution to over
+                <strong>100+ complex algorithmic problems</strong>, optimizing
+                for time and space complexity.
+              </p>
+              <div class="leetcode-scroll-box">
+                <ul class="blog-list">
+                  <li>#115 📦 2349. Design a Number Container System 🚀🧠</li>
+                  <li>#114 🗺️ 1765. Map of Highest Peak 🚀🧠</li>
+                  <li>#113 ⊹ 2017. Grid Game 🚀🧠</li>
+                  <li>#112 💧 407. Trapping Rain Water II 🚀🧠</li>
+                  <li>
+                    #111 💰💸 1368. Minimum Cost to Make at Least One Valid Path
+                    in a Grid 🚀🧠
+                  </li>
+                  <li>#110 1️⃣1️⃣0️⃣ 2429. Minimize XOR 🚀🧠</li>
+                  <li>
+                    #105 🌳 3203. Find Minimum Diameter After Merging Two Trees
+                    🚀🧠
+                  </li>
+                  <li>#103 📈 1792. Maximum Average Pass Ratio 🚀🧠</li>
+                  <li>
+                    #91 🗺️ 2577. Minimum Time to Visit a Cell In a Grid 🚀🧠
+                  </li>
+                  <li>
+                    #88 🛣️🚗 3243. Shortest Distance After Road Addition Queries
+                    I 🚀🧠
+                  </li>
+                  <li>
+                    #77 🔢📏 862. Shortest Subarray with Sum at Least K 🧠🚀
+                  </li>
+                  <li>#68 0️⃣0️⃣1️⃣0️⃣ 1829. Maximum XOR for Each Query 🧠🚀</li>
+                  <li>
+                    #58 ⛰️ 1671. Minimum Number of Removals to Make Mountain
+                    Array 🧠🚀
+                  </li>
+                  <li>
+                    #53 📂✨ 1233. Remove Sub-Folders from the Filesystem 🧠🚀
+                  </li>
+                  <li>#43 🌳 427. Construct Quad Tree 🧠🚀</li>
+                  <li>
+                    #31 1942. The Number of the Smallest Unoccupied Chair 🪑
+                    🧠🚀
+                  </li>
+                  <li>#14 432. All O`one Data Structure 🧠💡</li>
+                  <li><em>... and 80+ more algorithmic deep dives.</em></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>The <span class="gradient-text">Impact</span></h2>
+            <p>
+              This blog serves as my external brain. By publicly documenting my
+              learning process, I hold myself accountable to the highest
+              standards of understanding.
+            </p>
+            <p>
+              • <strong>Trend Analysis:</strong> Identifying the shift from LLMs
+              to Agents before it hit the mainstream.
+            </p>
+            <p>
+              • <strong>Technical Depth:</strong> Proving mastery over Data
+              Structures (Trees, Graphs, DP) through consistent practice.
+            </p>
+            <p>
+              • <strong>Financial Literacy:</strong> Bridging the gap between
+              code and capital markets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="lightboxModal" class="image-modal">
+      <span class="close-image-modal" onclick="closeLightbox()">&times;</span>
+      <img class="image-modal-content" id="expandedImg" />
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="current-year"></span> Milan Kacar. Built with passion. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
