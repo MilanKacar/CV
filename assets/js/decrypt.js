@@ -1,5 +1,4 @@
 (function () {
-
   const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
   const parseBool = (v, f = false) =>
@@ -141,6 +140,7 @@
     function startScramble() {
       if (interval) clearInterval(interval);
       isScrambling = true;
+      isHovering = true; // Ensure this is set
       currentIteration = 0;
       interval = setInterval(() => {
         if (sequential) {
@@ -181,8 +181,8 @@
     // initial render
     renderVisible();
 
-    // HOVER
-    if (animateOn === 'hover' || animateOn === 'both' || animateOn === 'load') {
+    // HOVER - only add hover listeners if animateOn includes 'hover' or 'both' (but NOT 'load')
+    if (animateOn === 'hover' || animateOn === 'both') {
       wrapper.addEventListener('mouseenter', () => {
         isHovering = true;
         startScramble();
@@ -200,8 +200,7 @@
           for (const entry of entries) {
             if (entry.isIntersecting && !hasAnimated) {
               hasAnimated = true;
-              isHovering = true; // reuse same path
-              setTimeout(startScramble, baseDelay); // respect data-delay on view too
+              setTimeout(startScramble, baseDelay);
             }
           }
         },
@@ -210,8 +209,9 @@
       io.observe(wrapper);
     }
 
-    // LOAD — start as soon as we initialize (we'll init after loader hides)
+    // LOAD — start as soon as we initialize (only for 'load' animateOn)
     if (animateOn === 'load') {
+      hasAnimated = true; // Prevent re-animation
       setTimeout(startScramble, baseDelay);
     }
 
@@ -223,7 +223,6 @@
   }
 
   function attachAllOnce(root = document) {
-
     if (isMobile) {
       root.querySelectorAll('.decrypted').forEach((el) => {
         el.classList.remove('decrypted');
