@@ -1475,7 +1475,6 @@ footer {
   display: flex;
 }
 
-/* Modal Content (The Image) */
 .image-modal-content {
   max-width: 95%;
   max-height: 95vh;
@@ -1489,7 +1488,6 @@ footer {
   border: 2px solid rgba(102, 126, 234, 0.3);
 }
 
-/* Add Animation */
 @keyframes zoomIn {
   from {
     transform: scale(0.5);
@@ -1501,7 +1499,6 @@ footer {
   }
 }
 
-/* The Close Button */
 .close-image-modal {
   position: fixed;
   top: 20px;
@@ -1537,12 +1534,10 @@ footer {
   transform: scale(0.95);
 }
 
-/* Loading state */
 .image-modal-content.loading {
   opacity: 0.5;
 }
 
-/* Mobile Responsive */
 @media only screen and (max-width: 768px) {
   .image-modal {
     padding: 10px;
@@ -1563,7 +1558,6 @@ footer {
   }
 }
 
-/* Smooth fade for modal background */
 .image-modal {
   animation: fadeIn 0.3s ease;
 }
