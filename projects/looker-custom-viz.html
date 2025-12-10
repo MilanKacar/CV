@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Period-over-Period KPI Viz – Milan Kacar</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/page.js"></script>
+    <script defer src="../assets/js/modal.js"></script>
+    <script defer src="../assets/js/navbar.js"></script>
+    <script defer src="../assets/js/project.js"></script>
+    <meta
+      name="description"
+      content="An open-source custom visualization for period-over-period KPI comparison, designed to overcome the limitations of standard BI tables."
+    />
+    <meta
+      property="og:title"
+      content="Period-over-Period KPI Viz – Milan Kacar"
+    />
+    <meta
+      property="og:description"
+      content="A highly customizable Looker visualization for tracking business metrics side-by-side with smart delta highlighting."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div class="loader-container" id="loader" style="display: flex">
+      <div class="chip">
+        <div class="chip-outer">
+          <div class="chip-inner">
+            <div class="chip-circuits">
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+            </div>
+            <div class="chip-grid">
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a
+            href="../#home"
+            class="nav-link active"
+            onclick="handleNavClick(event, 'home', true)"
+          ></a>
+          <img src="../assets/icons/logo.svg" alt="Logo" />
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a
+              href="../#home"
+              class="nav-link"
+              onclick="handleNavClick(event, 'home', true)"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#skills"
+              class="nav-link"
+              onclick="handleNavClick(event, 'skills', true)"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#projects"
+              class="nav-link active"
+              onclick="handleNavClick(event, 'projects', true)"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#experience"
+              class="nav-link"
+              onclick="handleNavClick(event, 'experience', true)"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#contact"
+              class="nav-link"
+              onclick="handleNavClick(event, 'contact', true)"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="https://milankacar.github.io/" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="project-detail">
+        <div class="container">
+          <a href="../#projects" class="back-button" id="backBtn"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              Period-over-Period
+              <span class="gradient-text">KPI Visualization</span>
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Role:</strong> Author & Open Source Contributor
+              </div>
+              <div class="meta-item">
+                <strong>Status:</strong> Live / Open Source
+              </div>
+              <div class="meta-item"><strong>Year:</strong> 2025</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              Tracking metrics across time periods is critical, but standard BI
+              tools often fall short. I developed this
+              <strong>open-source visualization</strong> to solve the "cluttered
+              table" problem. It provides a clear, side-by-side comparison of
+              KPIs with intuitive up/down indicators, empowering teams to move
+              from raw data to decisions instantly.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/MilanKacar/viz-period_over_period/tree/main"
+                target="_blank"
+                class="btn btn-primary"
+                >Live Repository</a
+              >
+              <button class="btn btn-secondary" data-view-code>
+                View Source
+              </button>
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <img
+              src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/refs/heads/main/doc/viz-pop.gif"
+              alt="Period over Period KPI Visualization Animation"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+              "
+              onclick="openLightbox(this)"
+            />
+          </div>
+
+          <div class="project-section">
+            <h2>The <span class="gradient-text">Challenge</span></h2>
+            <p>
+              While working with modern BI tools, our team at
+              <strong>niceshops</strong> encountered a recurring friction point:
+              default visualizations were inflexible.
+            </p>
+
+            <div
+              class="features-grid"
+              style="
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                margin-top: 2rem;
+              "
+            >
+              <div class="feature-item">
+                <h3>❌ 1. Standard Tables</h3>
+                <p style="margin-bottom: 1rem">
+                  Traditional tables result in cramped displays that bury
+                  insights in rows of numbers. It's hard to quickly scan for
+                  "What changed?"
+                </p>
+                <img
+                  src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/main/doc/table_viz.png"
+                  alt="Cluttered Standard Table"
+                  style="
+                    width: 100%;
+                    border-radius: 8px;
+                    border: 1px solid var(--border-color);
+                    cursor: pointer;
+                  "
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="feature-item">
+                <h3>❌ 2. Multiple Value Cards</h3>
+                <p style="margin-bottom: 1rem">
+                  Single-value visualizations often only show one column at a
+                  time. Comparing multiple metrics requires cluttering the
+                  dashboard with dozens of separate tiles.
+                </p>
+                <img
+                  src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/main/doc/mult-value.png"
+                  alt="Limited Single Value Viz"
+                  style="
+                    width: 100%;
+                    border-radius: 8px;
+                    border: 1px solid var(--border-color);
+                    cursor: pointer;
+                  "
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Capabilities</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>📊 Clear Comparison</h3>
+                <p>
+                  Tracks and compares key business metrics for two different
+                  periods side-by-side, offering instant visual feedback on
+                  performance.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🚦 Smart Highlighting</h3>
+                <p>
+                  Intuitive up/down indicators with configurable logic (e.g.,
+                  flagging rising costs as negative) make it obvious where
+                  attention is needed.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🎨 Flexible Layouts</h3>
+                <p>
+                  Switch seamlessly between <strong>Horizontal</strong> and
+                  <strong>Vertical</strong> orientations to fit any dashboard
+                  design or reporting standard.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>⚙️ Zero Friction</h3>
+                <p>
+                  Eliminates the need for patchwork solutions. It's
+                  purpose-built to surface trends without requiring complex SQL
+                  or custom HTML.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🧩 Highly Customizable</h3>
+                <p>
+                  Full control over colors, labels, and column selection allows
+                  the visualization to align perfectly with corporate branding.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🤝 Open Source</h3>
+                <p>
+                  Released freely to the community to help other data teams save
+                  time, avoid frustration, and focus on growth.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Under the <span class="gradient-text">Hood</span></h2>
+            <p>
+              This project is built as a custom custom visualization plugin,
+              designed to be lightweight and easily integrating into existing
+              data pipelines.
+            </p>
+            <br />
+            <p>
+              <strong>Core Logic:</strong> Vanilla JavaScript (`viz-pop.js`)
+              optimized for performance and rendering speed.
+            </p>
+            <p>
+              <strong>Configuration:</strong> `manifest.lkml` and
+              `marketplace.json` allow for seamless installation via the Looker
+              Marketplace or manual project import.
+            </p>
+            <p>
+              <strong>Data Handling:</strong> Dynamically processes query
+              results to calculate deltas and render conditional formatting on
+              the fly, respecting user-defined thresholds.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Interface <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img
+                  src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/main/doc/viz-2.png"
+                  alt="Visualization Main View - Vertical"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/main/doc/viz-1.png"
+                  alt="Visualization Main View"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/main/doc/options.png"
+                  alt="Configuration Options"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/main/doc/colors.png"
+                  alt="Color Customization"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/main/doc/comparioson-pos-neg.png"
+                  alt="Positive vs Negative Delta Logic"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+
+              <div class="gallery-item">
+                <img
+                  src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/main/doc/mult-value.png"
+                  alt="Visualization Main View"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Impact & <span class="gradient-text">Results</span></h2>
+            <p>
+              This tool was created to bridge the gap between raw data and
+              instant understanding.
+            </p>
+            <p>
+              • <strong>Accelerated Decisions:</strong> Stakeholders can now
+              spot winning trends or critical risks in seconds, not minutes.
+            </p>
+            <p>
+              • <strong>Team Alignment:</strong> A consistent, readable format
+              across the organization ensures analysts and executives speak the
+              same language.
+            </p>
+            <p>
+              • <strong>Community Growth:</strong> By open-sourcing this
+              solution, we are contributing to a broader culture of innovation
+              in the analytics ecosystem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="codeModal"
+      class="mk-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mkModalTitle"
+      aria-describedby="mkModalDesc"
+      aria-hidden="true"
+    >
+      <div class="mk-modal__backdrop" data-close></div>
+
+      <div class="mk-modal__card" role="document">
+        <button
+          class="mk-modal__close"
+          type="button"
+          aria-label="Close"
+          data-close
+        >
+          ✕
+        </button>
+
+        <h2 id="mkModalTitle" class="mk-modal__title">Source Code Files</h2>
+        <p id="mkModalDesc" class="mk-modal__text">
+          Access the core files directly on GitHub to integrate this
+          visualization into your project.
+        </p>
+
+        <div
+          class="mk-modal__actions"
+          style="flex-direction: column; gap: 10px; width: 100%"
+        >
+          <a
+            href="https://github.com/MilanKacar/viz-period_over_period/blob/main/src/manifest.lkml"
+            target="_blank"
+            class="btn btn-secondary"
+            style="width: 100%; text-align: center"
+          >
+            📄 View manifest.lkml
+          </a>
+          <a
+            href="https://github.com/MilanKacar/viz-period_over_period/blob/main/src/viz-pop.js"
+            target="_blank"
+            class="btn btn-secondary"
+            style="width: 100%; text-align: center"
+          >
+            ⚡ View viz-pop.js
+          </a>
+          <a
+            href="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/refs/heads/main/marketplace.json"
+            target="_blank"
+            class="btn btn-secondary"
+            style="width: 100%; text-align: center"
+          >
+            📦 View marketplace.json
+          </a>
+          <br />
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-close
+            style="width: 100%"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightboxModal" class="image-modal">
+      <span class="close-image-modal" onclick="closeLightbox()">&times;</span>
+      <img class="image-modal-content" id="expandedImg" />
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="current-year"></span> Milan Kacar. Built with passion. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
