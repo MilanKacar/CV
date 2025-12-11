@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robust Solar Detection & Model Soups – Milan Kacar</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/page.js"></script>
+    <script defer src="../assets/js/modal.js"></script>
+    <script defer src="../assets/js/navbar.js"></script>
+    <script defer src="../assets/js/project.js"></script>
+    <script defer src="../assets/js/formulaRender.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <meta
+      name="description"
+      content="Master's Thesis utilizing YOLOv5 and Greedy Model Soups to achieve 95.7% accuracy in solar panel detection across diverse satellite imagery."
+    />
+    <meta property="og:title" content="Robust Solar Detection – Milan Kacar" />
+    <meta
+      property="og:description"
+      content="Scientific research applying Model Soups to solve out-of-distribution shifts in remote sensing."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div class="loader-container" id="loader" style="display: flex">
+      <div class="chip">
+        <div class="chip-outer">
+          <div class="chip-inner">
+            <div class="chip-circuits">
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+            </div>
+            <div class="chip-grid">
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a
+            href="../#home"
+            class="nav-link active"
+            onclick="handleNavClick(event, 'home', true)"
+          ></a>
+          <img src="../assets/icons/logo.svg" alt="Logo" />
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a
+              href="../#home"
+              class="nav-link active"
+              onclick="handleNavClick(event, 'home', true)"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#skills"
+              class="nav-link"
+              onclick="handleNavClick(event, 'skills', true)"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#projects"
+              class="nav-link"
+              onclick="handleNavClick(event, 'projects', true)"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#experience"
+              class="nav-link"
+              onclick="handleNavClick(event, 'experience', true)"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#contact"
+              class="nav-link"
+              onclick="handleNavClick(event, 'contact', true)"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="https://milankacar.github.io/" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="project-detail">
+        <div class="container">
+          <a href="../#projects" class="back-button" id="backBtn"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              Robust
+              <span class="gradient-text">Solar Panel Detection</span> via Model
+              Soups
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Type:</strong> Master's Thesis
+              </div>
+              <div class="meta-item"><strong>Institution:</strong> TU Graz</div>
+              <div class="meta-item"><strong>Year:</strong> 2024</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              A scientific study addressing
+              <strong>Out-of-Distribution (OOD)</strong> generalization in
+              remote sensing. By implementing
+              <strong>Greedy Model Soups</strong>—a technique derived from
+              Google Research—and optimizing
+              <strong>YOLOv5</strong> architectures, this research achieved a
+              state-of-the-art accuracy of <strong>95.7%</strong>
+              on heterogeneous satellite datasets, significantly outperforming
+              traditional ensemble methods.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://repository.tugraz.at/publications/marc21/hnwx4-k5219/files/74870.pdf?download=1"
+                target="_blank"
+                class="btn btn-primary"
+                >Read Thesis</a
+              >
+              <a href="#" class="btn btn-secondary" data-view-code
+                >View Methodology</a
+              >
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <img
+              src="./imgs/project-4-solar-imgs/complete_pipe_sf.jpg"
+              alt="Georeferencing and Detection Pipeline"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+              "
+              onclick="openLightbox(this)"
+            />
+          </div>
+
+          <div class="project-section">
+            <h2>The <span class="gradient-text">Scientific Challenge</span></h2>
+            <p>
+              The scalability of renewable energy monitoring is hindered by
+              "distribution shifts"—variations in image resolution, seasonality,
+              and architectural styles across different geographies. Traditional
+              Deep Learning models (like VGG16 or standard YOLOv3) often fail to
+              generalize when applied to regions outside their training
+              distribution (OOD).
+            </p>
+            <p>
+              This thesis hypothesized that <strong>Model Soups</strong>, a
+              method of averaging weights from multiple fine-tuned models
+              sharing the same initialization, could improve robustness against
+              these shifts without the computational overhead of traditional
+              ensembles.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Research <span class="gradient-text">Contributions</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>🍲 Greedy Model Soups</h3>
+                <p>
+                  Implemented the "Greedy Soup" algorithm (Wortsman et al.),
+                  which iteratively averages model weights only if they improve
+                  validation accuracy. This raised performance from 91.6%
+                  (single best model) to <strong>95.7%</strong>.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🛰️ Multi-Source Pipeline</h3>
+                <p>
+                  Engineered a robust pipeline integrating SolarFinder,
+                  DeepSolar, FCDPA, and custom Vienna GIS data. Includes
+                  georeferencing ($x,y \leftrightarrow \lambda,\varphi$) and
+                  building masking via OpenStreetMap.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>⚡ YOLOv5 Optimization</h3>
+                <p>
+                  Fine-tuned YOLOv5 with Cross-Stage Partial (CSP) networks and
+                  Feature Pyramid Networks (FPN) to handle multi-scale object
+                  detection in high-resolution aerial imagery.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>📊 Robustness Metrics</h3>
+                <p>
+                  Utilized novel <strong>Affinity</strong> and
+                  <strong>Diversity</strong> metrics to mathematically quantify
+                  the model's resilience to data augmentation and distribution
+                  shifts.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🏙️ Vienna Case Study</h3>
+                <p>
+                  Applied the final Greedy Model to perform a temporal analysis
+                  of Vienna (2015–2021), detecting a growth trend to
+                  approximately <strong>29,000</strong> installations.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🔧 Hyperparameter Evolution</h3>
+                <p>
+                  Conducted extensive experiments across 36 models with varying
+                  hyperparameters (learning rate, mosaic augmentation, focal
+                  loss gamma) to create a diverse ingredient pool for the
+                  "Soup".
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Quantitative <span class="gradient-text">Results</span></h2>
+            <p>
+              The application of Model Soups proved superior to individual
+              fine-tuning. While the best single YOLOv5 model achieved an
+              accuracy of 0.9168, the
+              <strong>Greedy Model Soup</strong> converged to an accuracy of
+              <strong>0.9569</strong>.
+            </p>
+            <br />
+            <p>
+              The visual below illustrates the accuracy trajectory. The red
+              triangle represents the final Greedy Soup model, which aggregates
+              the strengths of the individual blue data points (fine-tuned
+              models) to reach a new optimum on the loss landscape.
+            </p>
+
+            <div
+              class="project-hero-image"
+              style="margin-top: 2rem; margin-bottom: 2rem"
+            >
+              <img
+                src="./imgs/project-4-solar-imgs/model_soups.png"
+                alt="Accuracy Comparison: Individual Models vs Greedy Soup"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 12px;
+                  border: 1px solid var(--border-color);
+                "
+                onclick="openLightbox(this)"
+              />
+            </div>
+
+            <p>
+              <strong>Final Metrics (Greedy Model):</strong><br />
+              • <strong>F1 Score:</strong> 0.9686<br />
+              • <strong>Precision:</strong> 0.9794<br />
+              • <strong>Recall:</strong> 0.9580<br />
+              • <strong>mAP@0.5:</strong> 0.8208
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Real-World <span class="gradient-text">Impact</span></h2>
+            <p>
+              To validate the model's practical utility, a temporal analysis was
+              conducted on the city of Vienna. The model autonomously tracked
+              solar adoption over a 6-year period, identifying a clear upward
+              trend in renewable energy infrastructure.
+            </p>
+
+            <div class="project-gallery" style="margin-top: 20px">
+              <div class="gallery-item" style="width: 100%">
+                <img
+                  src="./imgs/project-4-solar-imgs/number_of_panels_vienna.png"
+                  alt="Solar Panel Growth in Vienna (2015-2021)"
+                  style="width: 100%; height: auto; object-fit: contain"
+                  onclick="openLightbox(this)"
+                />
+                <p
+                  style="
+                    text-align: center;
+                    color: var(--text-secondary);
+                    margin-top: 10px;
+                    font-size: 0.9rem;
+                  "
+                >
+                  Figure: Automated census of solar panels in Vienna, detecting
+                  ~29,000 units by 2021.
+                </p>
+              </div>
+            </div>
+
+            <div class="project-section">
+              <h2>Detection <span class="gradient-text">Gallery</span></h2>
+              <p>
+                Samples of detection results on augmented test data,
+                demonstrating robustness against rotation, scale, and lighting
+                variations.
+              </p>
+              <div class="project-hero-image" style="margin-top: 1rem">
+                <img
+                  src="./imgs/project-4-solar-imgs/results_detection_with_augmentation.png"
+                  alt="YOLOv5 Detection Results with Augmentation"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    border-radius: 12px;
+                    border: 1px solid var(--border-color);
+                  "
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="codeModal"
+      class="mk-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mkModalTitle"
+      aria-describedby="mkModalDesc"
+      aria-hidden="true"
+    >
+      <div class="mk-modal__backdrop" data-close></div>
+
+      <div class="mk-modal__card" role="document">
+        <button
+          class="mk-modal__close"
+          type="button"
+          aria-label="Close"
+          data-close
+        >
+          ✕
+        </button>
+
+        <h2 id="mkModalTitle" class="mk-modal__title">
+          Algorithmic Implementation
+        </h2>
+        <p id="mkModalDesc" class="mk-modal__text">
+          The core of this research utilizes the
+          <strong>Greedy Soup</strong> algorithm (Algorithm 2 in the thesis).
+          Unlike traditional ensembles that require $N$ forward passes, Model
+          Soups average weights $\theta$ in parameter space: <br /><br />
+          $$ \theta_{soup} = \frac{1}{|S|} \sum_{i \in S} \theta_i $$
+          <br /><br />
+          The greedy approach sorts models by validation accuracy and
+          sequentially adds them to set $S$ only if $$Acc(Avg(\theta_S \cup
+          \theta_{new})) > Acc(Avg(\theta_S))$$.
+        </p>
+
+        <div class="mk-modal__actions">
+          <a
+            href="https://repository.tugraz.at/publications/marc21/hnwx4-k5219/files/74870.pdf?download=1"
+            target="_blank"
+            class="btn btn-primary"
+            >Download Thesis</a
+          >
+          <button type="button" class="btn btn-secondary" data-close>
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightboxModal" class="image-modal">
+      <span class="close-image-modal" onclick="closeLightbox()">&times;</span>
+      <img class="image-modal-content" id="expandedImg" />
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="current-year"></span> Milan Kacar. Built with passion. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
