@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise Data Lake Ecosystem – Milan Kacar</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/page.js"></script>
+    <script defer src="../assets/js/modal.js"></script>
+    <script defer src="../assets/js/navbar.js"></script>
+    <script defer src="../assets/js/project.js"></script>
+    <meta
+      name="description"
+      content="Architecting a GDPR-compliant, multi-tenant Data Lake utilizing Hadoop, PySpark, and Google Cloud to process 53B+ rows."
+    />
+    <meta
+      property="og:title"
+      content="Enterprise Data Lake Ecosystem – Milan Kacar"
+    />
+    <meta
+      property="og:description"
+      content="A scalable Big Data infrastructure powering 1000+ dashboards with 17TB+ of data, utilizing Dataproc, Vertex AI, and Looker."
+    />
+    <meta property="og:type" content="website" />
+    <style>
+      /* Inline style for small text icons in the architecture list */
+      .inline-icon {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 6px;
+        position: relative;
+        top: -2px;
+      }
+      .tech-detail-list {
+        list-style: none;
+        padding: 0;
+      }
+      .tech-detail-list li {
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        border-left: 2px solid var(--secondary-color);
+      }
+      .tech-detail-list h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        color: var(--text-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-container" id="loader" style="display: flex">
+      <div class="chip">
+        <div class="chip-outer">
+          <div class="chip-inner">
+            <div class="chip-circuits">
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+            </div>
+            <div class="chip-grid">
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a href="../#home" class="nav-link active"></a>
+          <img src="../assets/icons/logo.svg" alt="Logo" />
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../#home" class="nav-link active">Home</a></li>
+          <li><a href="../#skills" class="nav-link">Skills</a></li>
+          <li><a href="../#projects" class="nav-link">Projects</a></li>
+          <li><a href="../#experience" class="nav-link">Experience</a></li>
+          <li><a href="../#contact" class="nav-link">Contact</a></li>
+          <li>
+            <a href="https://milankacar.github.io/" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="project-detail">
+        <div class="container">
+          <a href="../#projects" class="back-button" id="backBtn"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              Global Scale
+              <span class="gradient-text">Data Lake Ecosystem</span>
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Role:</strong> Lead Data Architect
+              </div>
+              <div class="meta-item">
+                <strong>Tech:</strong> Hadoop, PySpark, GCP
+              </div>
+              <div class="meta-item"><strong>Status:</strong> Production</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 18px;
+                line-height: 1.8;
+                margin-top: 1.5rem;
+              "
+            >
+              Designing and maintaining the central data nervous system for
+              <strong>niceshops</strong>, a leading European e-commerce group.
+              This infrastructure supports over
+              <strong>40 distinct online shops</strong> operating in
+              <strong>30+ languages</strong>. By ingesting data from internal
+              production databases, real-time system logs, and over
+              <strong>50 external performance marketing sources</strong>, we
+              ensure that every strategic business decision is backed by
+              granular, high-fidelity data.
+            </p>
+          </div>
+
+          <div class="project-hero-image">
+            <img
+              src="./imgs/project-5-data-lake/dataform.gif"
+              alt="Real-time Data Processing Pipeline Visualization"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+              "
+              onclick="openLightbox(this)"
+            />
+          </div>
+
+          <div class="project-section">
+            <h2>The <span class="gradient-text">Architecture</span></h2>
+            <p>
+              The challenge at this scale wasn't just volume—it was the variety
+              of data types and the velocity required for decision making. We
+              manage a data estate that grows daily, currently housing over
+              <strong>53 Billion rows</strong> of data.
+            </p>
+            <p>
+              To handle this, we implemented a robust
+              <strong>Distributed Computing</strong> model using the Hadoop
+              ecosystem on Google Cloud:
+            </p>
+
+            <ul class="tech-detail-list">
+              <li>
+                <h3>
+                  <img
+                    src="./imgs/project-5-data-lake/dataproc.svg"
+                    class="inline-icon"
+                    alt="Hadoop"
+                  />
+                  Hadoop & YARN (Cluster Management)
+                </h3>
+                <p style="color: var(--text-secondary)">
+                  We utilize <strong>Google Cloud Dataproc</strong> to provision
+                  ephemeral clusters. At the core, <strong>YARN</strong> (Yet
+                  Another Resource Negotiator) acts as the operating system for
+                  our big data applications, allocating resources (CPU/RAM)
+                  across worker nodes. This allows us to scale processing power
+                  dynamically based on the workload, ensuring cost-efficiency
+                  without sacrificing performance.
+                </p>
+              </li>
+
+              <li>
+                <h3>
+                  <img
+                    src="./imgs/project-5-data-lake/vertexai.svg"
+                    class="inline-icon"
+                    alt="Spark"
+                  />
+                  PySpark & Distributed Processing
+                </h3>
+                <p style="color: var(--text-secondary)">
+                  Standard SQL couldn't handle our complex unstructured logs. We
+                  switched to <strong>PySpark</strong> to leverage:
+                </p>
+                <ul
+                  style="
+                    margin-left: 20px;
+                    margin-top: 10px;
+                    list-style-type: disc;
+                    color: var(--text-secondary);
+                  "
+                >
+                  <li>
+                    <strong>In-Memory Computation:</strong> Unlike MapReduce
+                    which writes to disk after every step, Spark keeps
+                    intermediate data in RAM, speeding up iterative algorithms
+                    by 100x.
+                  </li>
+                  <li>
+                    <strong>Catalyst Optimizer:</strong> Spark constructs a
+                    Directed Acyclic Graph (DAG) of our queries. The Catalyst
+                    optimizer then rearranges operations (e.g., pushing filters
+                    down before joins) to generate the most efficient execution
+                    plan automatically.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <h3>
+                  <img
+                    src="./imgs/project-5-data-lake/cloud_deploy.svg"
+                    class="inline-icon"
+                    alt="Dataform"
+                  />
+                  Modern Transformation with Dataform
+                </h3>
+                <p style="color: var(--text-secondary)">
+                  For our BigQuery data warehouse, we treat "Data as Code." We
+                  integrate <strong>Google Cloud Dataform</strong> to manage SQL
+                  transformation pipelines. This allows us to apply software
+                  engineering best practices—such as version control (Git),
+                  testing, and CI/CD—directly to our SQL logic. Dataform handles
+                  dependency management, ensuring that tables are updated in the
+                  correct order and protecting downstream dashboards from broken
+                  data.
+                </p>
+              </li>
+
+              <li>
+                <h3>
+                  <img
+                    src="./imgs/project-5-data-lake/cloud_storage.svg"
+                    class="inline-icon"
+                    alt="Storage"
+                  />
+                  Decoupled Storage (GCS vs HDFS)
+                </h3>
+                <p style="color: var(--text-secondary)">
+                  We decoupled storage from compute. Instead of HDFS, we use
+                  <strong>Cloud Storage</strong>. This allows us to shut down
+                  Dataproc clusters (saving money) while persisting data in
+                  low-cost object storage, formatted as highly compressed
+                  <strong>Parquet</strong> files.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h2>Powered by <span class="gradient-text">Google Cloud</span></h2>
+            <p>
+              A cloud-native, auto-scaling tech stack leveraging the best of
+              serverless and managed Hadoop services.
+            </p>
+
+            <div class="tech-grid">
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/dataproc.svg"
+                  alt="Dataproc"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Dataproc</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/pubsub.svg"
+                  alt="Pub/Sub"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Pub/Sub</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/cloud_storage.svg"
+                  alt="Cloud Storage"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Cloud Storage</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/data_transfer.svg"
+                  alt="Data Transfer"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Data Transfer</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/security.svg"
+                  alt="Data Transfer"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Security</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/secret_manager.svg"
+                  alt="Data Transfer"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Secret Manager</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/cloud_scheduler.svg"
+                  alt="Cloud Scheduler"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Cloud Scheduler</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/cloud_run.svg"
+                  alt="Cloud Run"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Cloud Run</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/cloud_deploy.svg"
+                  alt="Cloud Deploy"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Cloud Deploy</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/cloud_monitoring.svg"
+                  alt="Cloud Monitoring"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Monitoring</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/vertexai.svg"
+                  alt="Vertex AI"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Vertex AI</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/automl.svg"
+                  alt="AutoML"
+                  class="tech-icon"
+                />
+                <span class="tech-name">AutoML</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/cloud_tpu.svg"
+                  alt="Cloud TPU"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Cloud TPU</span>
+              </div>
+
+              <div class="tech-card">
+                <img
+                  src="./imgs/project-5-data-lake/looker.svg"
+                  alt="Looker"
+                  class="tech-icon"
+                />
+                <span class="tech-name">Looker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Data <span class="gradient-text">Statistics</span></h2>
+            <p>
+              We maintain rigorous oversight of our data assets. Below is a
+              snapshot of our core datasets, illustrating the sheer volume of
+              information processed daily.
+            </p>
+            <div class="stats-table-container">
+              <table class="stats-table">
+                <thead>
+                  <tr>
+                    <th>Data Domain</th>
+                    <th>Table Category</th>
+                    <th>Total Rows</th>
+                    <th>Logical Size</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Backend Infrastructure</td>
+                    <td>Raw System Logs</td>
+                    <td class="stat-highlight">7.2B+</td>
+                    <td>2.58 TB</td>
+                  </tr>
+                  <tr>
+                    <td>User Behavior</td>
+                    <td>Interaction Events</td>
+                    <td class="stat-highlight">5.9B+</td>
+                    <td>2.25 TB</td>
+                  </tr>
+                  <tr>
+                    <td>Analytics Ready</td>
+                    <td>Processed Interactions</td>
+                    <td class="stat-highlight">2.4B+</td>
+                    <td>970 GB+</td>
+                  </tr>
+                  <tr>
+                    <td>Product Catalog</td>
+                    <td>Merchant Center</td>
+                    <td class="stat-highlight">2.2B+</td>
+                    <td>890 GB+</td>
+                  </tr>
+                  <tr>
+                    <td>Security & Audit</td>
+                    <td>Cloud Access Logs</td>
+                    <td class="stat-highlight">830M+</td>
+                    <td>1.39 TB</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>
+              GDPR Compliance &
+              <span class="gradient-text">Privacy Engineering</span>
+            </h2>
+            <p>
+              Operating in the European market means privacy is not an
+              afterthought—it is the foundation of our architecture. We are
+              strictly <strong>GDPR compliant</strong> and employ a "Privacy by
+              Design" approach.
+            </p>
+            <p>
+              <strong>Consent-Based Tracking:</strong> We do not expose or share
+              any user information with third-party software unless the user has
+              explicitly accepted cookies. Our pipelines respect these consent
+              signals at the ingestion layer.
+            </p>
+            <p>
+              <strong>Pseudonymization at Scale:</strong>
+              For internal analytics, all Personally Identifiable Information
+              (PII) is masked using cryptographic salting before it ever reaches
+              the data lake. This ensures that while our data scientists can
+              analyze aggregate behavior and campaign effectiveness, they never
+              access raw user identities.
+            </p>
+            <div
+              style="
+                background: rgba(0, 0, 0, 0.2);
+                padding: 1.5rem;
+                border-radius: 8px;
+                border-left: 4px solid var(--secondary-color);
+                margin-top: 1rem;
+              "
+            >
+              <p style="margin: 0; font-size: 0.9rem; color: #ccc">
+                <strong>Example of Masked Entities:</strong><br />
+                Raw user identifiers are transformed into secure hashes like:
+                <br /><br />
+                <span class="masked-code">pseudonymous_users_20241202</span>
+                <span class="masked-code">p_Ad_3041952563</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Additional <span class="gradient-text">Architectures</span></h2>
+
+            <div style="margin-top: 2rem">
+              <h3>Gateway Ventures: Building from Scratch</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 1rem">
+                At <strong>Gateway Ventures</strong>, I had the unique
+                opportunity to build a Data Lake entirely from the ground up.
+                Unlike the massive scale of niceshops, the primary challenge
+                here was <strong>complexity and consistency</strong>.
+              </p>
+              <p style="color: var(--text-secondary); margin-bottom: 1rem">
+                I led the technology research to select a lean yet scalable
+                stack suitable for a high-growth Fintech environment. A critical
+                component was designing robust APIs to synchronize disparate
+                data sources—ensuring that our internal databases remained in
+                perfect sync with external CRMs like
+                <strong>Pipedrive</strong>. This required custom orchestration
+                logic to handle race conditions, API rate limits, and schema
+                evolution across multiple platforms.
+              </p>
+            </div>
+
+            <div
+              style="
+                margin-top: 2rem;
+                border-top: 1px solid #333;
+                padding-top: 2rem;
+              "
+            >
+              <h3>Personal Data Lab: Domain Statistics</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 1rem">
+                I maintain a personal <strong>Home Data Lake</strong> where I
+                scrape and ingest data from platforms like
+                <strong>Willhaben</strong>. While this setup uses professional
+                data engineering tools, the primary objective is
+                <strong>Statistical Domain Research</strong>.
+              </p>
+              <p style="color: var(--text-secondary)">
+                I utilize this data to perform longitudinal statistical analysis
+                on specific market domains, such as real estate price trends and
+                second-hand market evaluations. By applying statistical models
+                to this raw, unstructured data, I uncover hidden patterns in
+                pricing and availability that are not visible through standard
+                browsing, sharpening my ability to derive actionable insights
+                from messy, real-world datasets.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>
+              Business <span class="gradient-text">Impact & Innovation</span>
+            </h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <div style="margin-bottom: 1rem">
+                  <img
+                    src="./imgs/project-5-data-lake/looker.svg"
+                    alt="Looker"
+                    style="width: 32px"
+                  />
+                </div>
+                <h3>📊 1000+ Dashboards</h3>
+                <p>
+                  Our data feeds a massive Looker instance, powering over 1,000
+                  active dashboards that enable teams across the company to
+                  monitor KPIs, track sales, and optimize marketing spend in
+                  real-time.
+                </p>
+              </div>
+              <div class="feature-item">
+                <div style="margin-bottom: 1rem">
+                  <img
+                    src="./imgs/project-5-data-lake/cloud_deploy.svg"
+                    alt="Automation"
+                    style="width: 32px"
+                  />
+                </div>
+                <h3>⚡ Autonomous Ops</h3>
+                <p>
+                  Using <strong>Cloud Deploy</strong> and
+                  <strong>Cloud Monitoring</strong>, we've automated the CI/CD
+                  pipelines. The system is self-healing, alerting us only on
+                  critical anomalies via Slack.
+                </p>
+              </div>
+              <div class="feature-item">
+                <div style="margin-bottom: 1rem">
+                  <img
+                    src="./imgs/project-5-data-lake/vertexai.svg"
+                    alt="AI"
+                    style="width: 32px"
+                  />
+                </div>
+                <h3>🤖 AI-First Integration</h3>
+                <p>
+                  We are deeply committed to integrating the latest AI
+                  developments. From deploying <strong>LLMs</strong> for
+                  semantic search to utilizing
+                  <strong>Generative AI</strong> for automated data cataloging,
+                  our system is architected to rapidly adopt and scale emerging
+                  AI capabilities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="current-year"></span> Milan Kacar. Built with passion. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <div id="lightboxModal" class="image-modal">
+      <span class="close-image-modal" onclick="closeLightbox()">&times;</span>
+      <img class="image-modal-content" id="expandedImg" />
+    </div>
+  </body>
+</html>
