@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowState: Gamified Recruitment AI – Milan Kacar</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/page.js"></script>
+    <script defer src="../assets/js/modal.js"></script>
+    <script defer src="../assets/js/navbar.js"></script>
+    <script defer src="../assets/js/project.js"></script>
+    <meta
+      name="description"
+      content="A kinetic, swipe-based recruitment platform that uses AI to score candidates and human intuition to decide. Ending resume fatigue."
+    />
+    <meta
+      property="og:title"
+      content="FlowState Recruitment AI – Milan Kacar"
+    />
+    <meta
+      property="og:description"
+      content="Reinventing the hiring process with a high-velocity swipe UI and AI-driven compatibility scoring."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div class="loader-container" id="loader" style="display: flex">
+      <div class="chip">
+        <div class="chip-outer">
+          <div class="chip-inner">
+            <div class="chip-circuits">
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+            </div>
+            <div class="chip-grid">
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a
+            href="../#home"
+            class="nav-link active"
+            onclick="handleNavClick(event, 'home', true)"
+          ></a>
+          <img src="../assets/icons/logo.svg" alt="Logo" />
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a
+              href="../#home"
+              class="nav-link active"
+              onclick="handleNavClick(event, 'home', true)"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#skills"
+              class="nav-link"
+              onclick="handleNavClick(event, 'skills', true)"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#projects"
+              class="nav-link"
+              onclick="handleNavClick(event, 'projects', true)"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#experience"
+              class="nav-link"
+              onclick="handleNavClick(event, 'experience', true)"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#contact"
+              class="nav-link"
+              onclick="handleNavClick(event, 'contact', true)"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="https://milankacar.github.io/" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="project-detail">
+        <div class="container">
+          <a href="../#projects" class="back-button" id="backBtn"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              FlowState: <span class="gradient-text">Gamified Recruitment</span>
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Role:</strong> Product Architect & Full Stack Dev
+              </div>
+              <div class="meta-item"><strong>Duration:</strong> Ongoing</div>
+              <div class="meta-item"><strong>Year:</strong> 2025</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              A high-velocity screening platform that solves "Resume Fatigue" by
+              combining AI extraction with a gestural, swipe-based interface. We
+              leverage LLMs to handle the boring data processing, presenting HR
+              managers with clear, scored profile cards. The result?
+              <strong>10x faster screening</strong> where AI suggests, but the
+              <span style="color: var(--accent-color)">Human</span> decides.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary" data-view-code>View Code</a>
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <img
+              src="./imgs/project-6-cv-validator/demo.gif"
+              alt="FlowState App Demo showing swipe interface and AI scoring"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+              "
+              onclick="openLightbox(this)"
+            />
+          </div>
+
+          <div class="project-section">
+            <h2>The <span class="gradient-text">Problem</span> with Hiring</h2>
+            <p>
+              Traditional recruitment is broken. AI Automatic Tracking Systems
+              (ATS) are too aggressive, rejecting creative talent because of
+              missing keywords. Conversely, HR managers are drowning in PDFs,
+              spending seconds scanning boring documents and missing hidden
+              gems. This leads to massive "resume fatigue."
+            </p>
+            <p>
+              **The Solution:** Make screening as intuitive as a modern dating
+              app, but powered by enterprise-grade data extraction. By
+              transforming dense CVs into visual "Player Cards," we engage the
+              recruiter's intuition. The AI handles the reading; the human
+              handles the judgment.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Capabilities</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>⚡ Kinetic Interface</h3>
+                <p>
+                  Built on a "Swipe Left/Right" architecture. This gamified
+                  approach keeps recruiters in a "Flow State," reducing
+                  cognitive load and dramatically increasing screening velocity.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🤖 Instant Data Extraction</h3>
+                <p>
+                  Uses Large Language Models to instantly ingest PDF/Word
+                  documents and extract key skills, years of experience, and
+                  achievements into a structured format.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>💯 AI Compatibility Score</h3>
+                <p>
+                  Before you even swipe, the system compares the candidate's
+                  extracted skills against the Job Description to generate a
+                  "Match Probability" score.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>👁️ Augmented Intuition</h3>
+                <p>
+                  AI shouldn't replace humans in hiring. This tool empowers the
+                  human touch by presenting the facts clearly, allowing
+                  intuition to make the final call.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>📂 Smart Pipelines</h3>
+                <p>
+                  Approved candidates (Right Swipes) are automatically sorted
+                  into actionable pipelines (e.g., "Interview Ready," "Maybe")
+                  for seamless team handover.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🛡️ Bias Reduction (Planned)</h3>
+                <p>
+                  Future "Blind Mode" will hide names and photos until a "Right
+                  Swipe" is made, forcing decisions based purely on merit and
+                  metrics.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Under the <span class="gradient-text">Hood</span></h2>
+            <p>
+              This isn't just a UI wrapper; it's a complex data pipeline
+              designed for real-time interaction and zero latency.
+            </p>
+            <br />
+            <p>
+              <strong>Mobile/Front:</strong> React Native with Reanimated 2 for
+              silky smooth 60fps gesture animations.
+            </p>
+            <p>
+              <strong>The Brain:</strong> Python FastAPI backend serving as the
+              orchestrator.
+            </p>
+            <p>
+              <strong>NLP Engine:</strong> OpenAI API (GPT-4o) customized to
+              parse unstructured resume text into standardized skill taxonomies.
+            </p>
+            <p>
+              <strong>Database:</strong> PostgreSQL for user data + Redis for
+              caching the "Swipe Stack" to ensure instant card loading.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Interface <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img
+                  src="./imgs/project-6-cv-validator/cv.png"
+                  alt="Candidate Card View with AI Score"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="./imgs/project-6-cv-validator/swipe.png"
+                  alt="Swiping the candidate"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="./imgs/project-6-cv-validator/dashboard.png"
+                  alt="Dashboard"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Why This <span class="gradient-text">Matters</span></h2>
+            <p>
+              We are moving from an era of "Artificial Intelligence" to
+              "Augmented Intuition."
+            </p>
+            <p>
+              • <strong>Human-in-the-Loop:</strong> AI cannot detect cultural
+              fit or passion. This app lets AI do the math, and humans do the
+              sensing.
+            </p>
+            <p>
+              • <strong>Recruiter Happiness:</strong> By gamifying the most
+              tedious part of the job, we reduce burnout and significantly
+              increase the number of profiles reviewed daily.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="codeModal"
+      class="mk-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mkModalTitle"
+      aria-describedby="mkModalDesc"
+      aria-hidden="true"
+    >
+      <div class="mk-modal__backdrop" data-close></div>
+
+      <div class="mk-modal__card" role="document">
+        <button
+          class="mk-modal__close"
+          type="button"
+          aria-label="Close"
+          data-close
+        >
+          ✕
+        </button>
+
+        <h2 id="mkModalTitle" class="mk-modal__title">Demo Application</h2>
+        <p id="mkModalDesc" class="mk-modal__text">
+          This project is currently in the <strong>Alpha</strong> stage. <br />
+          The parsing algorithm and swipe logic are fully functional. I am
+          currently seeking early-stage partners to refine the "Skill Matching"
+          weights and UI experience.
+        </p>
+
+        <div class="mk-modal__actions">
+          <a href="mailto:milankacar@live.com" class="btn btn-primary"
+            >Request Beta Access</a
+          >
+          <button type="button" class="btn btn-secondary" data-close>
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightboxModal" class="image-modal">
+      <span class="close-image-modal" onclick="closeLightbox()">&times;</span>
+      <img class="image-modal-content" id="expandedImg" />
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="current-year"></span> Milan Kacar. Built with passion. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
