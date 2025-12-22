@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI SQL Analyst & Data Agent – Milan Kacar</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/page.js"></script>
+    <script defer src="../assets/js/modal.js"></script>
+    <script defer src="../assets/js/navbar.js"></script>
+    <script defer src="../assets/js/project.js"></script>
+    <meta
+      name="description"
+      content="An autonomous AI agent that converts natural language into complex SQL queries, democratizing data access for non-technical teams."
+    />
+    <meta property="og:title" content="AI SQL Analyst – Milan Kacar" />
+    <meta
+      property="og:description"
+      content="Self-serve data intelligence tool that reduces data team workload by 60% through autonomous Text-to-SQL conversion."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div class="loader-container" id="loader" style="display: flex">
+      <div class="chip">
+        <div class="chip-outer">
+          <div class="chip-inner">
+            <div class="chip-circuits">
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+            </div>
+            <div class="chip-grid">
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a
+            href="../#home"
+            class="nav-link active"
+            onclick="handleNavClick(event, 'home', true)"
+          ></a>
+          <img src="../assets/icons/logo.svg" alt="Logo" />
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a
+              href="../#home"
+              class="nav-link active"
+              onclick="handleNavClick(event, 'home', true)"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#skills"
+              class="nav-link"
+              onclick="handleNavClick(event, 'skills', true)"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#projects"
+              class="nav-link"
+              onclick="handleNavClick(event, 'projects', true)"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#experience"
+              class="nav-link"
+              onclick="handleNavClick(event, 'experience', true)"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#contact"
+              class="nav-link"
+              onclick="handleNavClick(event, 'contact', true)"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="https://milankacar.github.io/" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="project-detail">
+        <div class="container">
+          <a href="../#projects" class="back-button" id="backBtn"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              AI-Powered <span class="gradient-text">SQL Data Analyst</span>
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Role:</strong> Full Stack AI Engineer
+              </div>
+              <div class="meta-item">
+                <strong>Tech:</strong> React, FastAPI, LangGraph
+              </div>
+              <div class="meta-item"><strong>Year:</strong> 2025</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              A powerful AI-powered SQL analysis tool that democratizes data
+              access by allowing non-technical users to query databases using
+              plain English. By automating routine reporting ("How many users
+              signed up last week?"), this tool frees up data scientists to
+              focus on complex modeling rather than ad-hoc tickets.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/MilanKacar/AI-sql-analyst"
+                target="_blank"
+                class="btn btn-primary"
+                >View Code</a
+              >
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <img
+              src="imgs/project-7-ai-sql-analyst/ai_sql_analyst.gif"
+              alt="AI Analyst executing a live query"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+              "
+              onclick="openLightbox(this)"
+            />
+          </div>
+
+          <div class="project-section">
+            <h2>The <span class="gradient-text">Problem</span></h2>
+            <p>
+              Non-technical managers constantly nag data teams for simple
+              reports. This creates a bottleneck where executives rely on gut
+              feelings because the "time-to-insight" is too long, and highly
+              paid data scientists waste hours on basic SQL retrieval tasks.
+            </p>
+            <p>
+              This tool bridges that gap by providing a self-serve interface
+              that translates natural language questions into safe, optimized
+              SQL queries with instant visualization.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Capabilities</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>🗣️ Natural Language to SQL</h3>
+                <p>
+                  Ask questions in plain English ("Show me top 5 products by
+                  revenue") and get syntactically correct SQL generated
+                  automatically.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>📊 Auto-Visualization</h3>
+                <p>
+                  The system doesn't just fetch data; it analyzes the result set
+                  and generates beautiful charts using Matplotlib without user
+                  configuration.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🛡️ 6-Layer Safety System</h3>
+                <p>
+                  Comprehensive guardrails including Keyword Blocking (DROP,
+                  DELETE), Query Normalization, and Read-Only connection
+                  enforcement.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>⚡ Real-Time Execution</h3>
+                <p>
+                  Safely executes queries against SQLite databases with
+                  immediate feedback, reducing report turnaround from days to
+                  seconds.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🧠 Intelligent Validation</h3>
+                <p>
+                  Advanced pattern matching detects suspicious SQL injection
+                  attempts and logic errors before execution.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🎨 Modern Architecture</h3>
+                <p>
+                  Built with a React 18 + TypeScript frontend and a robust
+                  FastAPI + LangGraph backend for scalable agentic workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>
+              Enterprise <span class="gradient-text">Safety Protocol</span>
+            </h2>
+            <p>
+              Security is the primary constraint for any database agent. This
+              system implements a rigid multi-layer protection strategy to
+              ensure <strong>Read-Only integrity</strong>.
+            </p>
+            <br />
+
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                padding: 20px;
+                border-radius: 8px;
+                border: 1px solid var(--border-color);
+              "
+            >
+              <h3 style="color: var(--text-primary); margin-bottom: 15px">
+                🛡️ Active Guardrails
+              </h3>
+              <ul
+                style="
+                  list-style: none;
+                  padding: 0;
+                  color: var(--text-secondary);
+                "
+              >
+                <li style="margin-bottom: 10px">
+                  <strong>1. Keyword Blocking:</strong> Automatically rejects
+                  <code style="color: #ff6b6b">DROP</code>,
+                  <code style="color: #ff6b6b">DELETE</code>,
+                  <code style="color: #ff6b6b">UPDATE</code>,
+                  <code style="color: #ff6b6b">INSERT</code>,
+                  <code style="color: #ff6b6b">ALTER</code>.
+                </li>
+                <li style="margin-bottom: 10px">
+                  <strong>2. Pattern Detection:</strong> Identifies injection
+                  attempts via comments (<code style="color: #ffcd38">--</code>,
+                  <code style="color: #ffcd38">/* */</code>) and chained
+                  statements.
+                </li>
+                <li style="margin-bottom: 10px">
+                  <strong>3. Type Validation:</strong> Strictly enforces that
+                  every query must start with
+                  <code style="color: #4ade80">SELECT</code>.
+                </li>
+                <li>
+                  <strong>4. Schema Awareness:</strong> Sanitizes all table and
+                  column names against the known schema to prevent identifier
+                  manipulation.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Under the <span class="gradient-text">Hood</span></h2>
+            <p>
+              The architecture decouples the reasoning engine from the execution
+              environment.
+            </p>
+            <br />
+            <p>
+              <strong>Backend (Python):</strong>
+              <br />• <strong>FastAPI:</strong> High-performance RESTful API
+              server. <br />• <strong>LangGraph:</strong> Orchestrates the
+              agent's reasoning loop (Plan → Query → Validate). <br />•
+              <strong>SQLite:</strong> Read-only database connection. <br />•
+              <strong>Matplotlib:</strong> Server-side image generation for
+              consistency.
+            </p>
+            <br />
+            <p>
+              <strong>Frontend (React + TypeScript):</strong>
+              <br />• <strong>Vite:</strong> Ultra-fast build tool. <br />•
+              <strong>Axios:</strong> Handles asynchronous communication with
+              the inference engine. <br />•
+              <strong>Real-time UI:</strong> Displays SQL, Data Tables, and
+              Charts simultaneously.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Interface <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img
+                  src="imgs/project-7-ai-sql-analyst/1.png"
+                  alt="Dashboard Overview"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="imgs/project-7-ai-sql-analyst/2.png"
+                  alt="Natural Language Query Input"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="imgs/project-7-ai-sql-analyst/3.png"
+                  alt="Generated SQL and Data Table"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="imgs/project-7-ai-sql-analyst/4.png"
+                  alt="Automated Visualization Output"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Results & <span class="gradient-text">Impact</span></h2>
+            <p>
+              This tool has shifted the paradigm from "Gatekept Data" to
+              "Democratized Data."
+            </p>
+            <p>
+              • <strong>Zero-Latency Insights:</strong> Reduced feedback loop
+              from days to seconds.
+            </p>
+            <p>
+              • <strong>Safe Exploration:</strong> Enabled non-technical staff
+              to explore data without risk of corruption.
+            </p>
+            <p>
+              • <strong>High-Value Focus:</strong> Data scientists now spend
+              100% of their time on predictive modeling rather than fetching
+              CSVs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="codeModal"
+      class="mk-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mkModalTitle"
+      aria-describedby="mkModalDesc"
+      aria-hidden="true"
+    >
+      <div class="mk-modal__backdrop" data-close></div>
+
+      <div class="mk-modal__card" role="document">
+        <button
+          class="mk-modal__close"
+          type="button"
+          aria-label="Close"
+          data-close
+        >
+          ✕
+        </button>
+
+        <h2 id="mkModalTitle" class="mk-modal__title">Project Source Code</h2>
+        <p id="mkModalDesc" class="mk-modal__text">
+          This project is available for review. It demonstrates my ability to
+          build secure, full-stack AI applications with complex reasoning
+          loops.<br /><br />
+          <strong>Key Files to Check:</strong><br />
+          • <code>backend/app.py</code> (FastAPI Setup)<br />
+          • <code>backend/agent.py</code> (LangGraph Logic)<br />
+          • <code>backend/safety.py</code> (Guardrail Implementation)
+        </p>
+
+        <div class="mk-modal__actions">
+          <a
+            href="https://github.com/MilanKacar/AI-sql-analyst"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Visit GitHub Repo
+          </a>
+          <button type="button" class="btn btn-secondary" data-close>
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightboxModal" class="image-modal">
+      <span class="close-image-modal" onclick="closeLightbox()">&times;</span>
+      <img class="image-modal-content" id="expandedImg" />
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="current-year"></span> Milan Kacar. Built with passion. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
