@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM Tokenizer Playground – Milan Kacar</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/page.js"></script>
+    <script defer src="../assets/js/modal.js"></script>
+    <script defer src="../assets/js/navbar.js"></script>
+    <script defer src="../assets/js/project.js"></script>
+    <meta
+      name="description"
+      content="An interactive, high-performance web application built with Rust and React that visualizes how Large Language Models tokenize text using Byte Pair Encoding (BPE)."
+    />
+    <meta
+      property="og:title"
+      content="LLM Tokenizer Playground – Milan Kacar"
+    />
+    <meta
+      property="og:description"
+      content="Demystifying LLM internals through interactive visualization. A full-stack project using Rust for high-performance algorithms and React for intuitive UI."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div class="loader-container" id="loader" style="display: flex">
+      <div class="chip">
+        <div class="chip-outer">
+          <div class="chip-inner">
+            <div class="chip-circuits">
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line horizontal"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+              <div class="circuit-line vertical"></div>
+            </div>
+            <div class="chip-grid">
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+              <div class="chip-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a
+            href="../#home"
+            class="nav-link active"
+            onclick="handleNavClick(event, 'home', true)"
+          ></a>
+          <img src="../assets/icons/logo.svg" alt="Logo" />
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a
+              href="../#home"
+              class="nav-link active"
+              onclick="handleNavClick(event, 'home', true)"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#skills"
+              class="nav-link"
+              onclick="handleNavClick(event, 'skills', true)"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#projects"
+              class="nav-link"
+              onclick="handleNavClick(event, 'projects', true)"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#experience"
+              class="nav-link"
+              onclick="handleNavClick(event, 'experience', true)"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="../#contact"
+              class="nav-link"
+              onclick="handleNavClick(event, 'contact', true)"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="https://milankacar.github.io/" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="project-detail">
+        <div class="container">
+          <a href="../#projects" class="back-button" id="backBtn"
+            >← Back to Projects</a
+          >
+
+          <div class="project-header">
+            <h1>
+              Interactive
+              <span class="gradient-text">LLM Tokenizer</span> Playground
+            </h1>
+            <div class="project-meta">
+              <div class="meta-item">
+                <strong>Role:</strong> Full Stack Engineer (Rust/React)
+              </div>
+              <div class="meta-item">
+                <strong>Tech:</strong> Rust (Axum), React, TypeScript
+              </div>
+              <div class="meta-item"><strong>Year:</strong> 2025</div>
+            </div>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 20px;
+                line-height: 1.8;
+              "
+            >
+              A high-performance educational platform designed to expose the
+              "hidden mechanics" of Large Language Models. By visualizing the
+              Byte Pair Encoding (BPE) process step-by-step, this tool helps
+              engineers understand exactly how raw text is compressed into the
+              tokens that power modern AI.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/MilanKacar/learn-2-tokenize"
+                target="_blank"
+                class="btn btn-primary"
+                >View Code</a
+              >
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <img
+              src="imgs/project-8-tokenizer/tokenizer.gif"
+              alt="Animation showing characters merging into tokens"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+              "
+              onclick="openLightbox(this)"
+            />
+          </div>
+
+          <div class="project-section">
+            <h2>
+              The <span class="gradient-text">"Under the Hood"</span> Mission
+            </h2>
+            <p>
+              In the rush to adopt AI, many developers treat LLMs as black
+              boxes. However, ignoring the fundamentals leads to costly
+              mistakes—such as inefficient prompt engineering, misunderstood
+              context limits, and token-related bugs.
+            </p>
+            <p>
+              <strong>I built this project to fix that blindness.</strong>
+            </p>
+            <p>
+              I wanted to create a tool that forces the user to see the granular
+              reality of AI: that models don't read "words," they read
+              statistical chunks of bytes. By exposing the BPE algorithm
+              visually, I aim to help developers build better, more efficient
+              AI-native applications.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key <span class="gradient-text">Capabilities</span></h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h3>🔍 Step-by-Step Transparency</h3>
+                <p>
+                  Watch the algorithm "think." Users can step through every
+                  single merge operation to see exactly when and why characters
+                  combine into tokens.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>⚙️ BPE from First Principles</h3>
+                <p>
+                  No external libraries. I implemented the Byte Pair Encoding
+                  algorithm from scratch to demonstrate a deep, low-level
+                  understanding of NLP mechanics.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>⚡ Rust-Powered Speed</h3>
+                <p>
+                  Utilizing Rust's memory safety and zero-cost abstractions to
+                  perform thousands of iterative merges and frequency counts in
+                  milliseconds.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>📘 Dynamic Vocabulary</h3>
+                <p>
+                  A real-time look at how the model's "dictionary" is
+                  constructed on the fly, mapping byte sequences to unique
+                  integer IDs.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>🔢 Raw Byte Inspection</h3>
+                <p>
+                  Toggle between text and byte views to understand how the
+                  tokenizer handles complex UTF-8 characters and emojis at the
+                  binary level.
+                </p>
+              </div>
+              <div class="feature-item">
+                <h3>📈 Efficiency Analytics</h3>
+                <p>
+                  Instant feedback on compression ratios, helping users
+                  understand the token-cost implications of their text inputs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>
+              Technical Deep Dive: <span class="gradient-text">Why Rust?</span>
+            </h2>
+            <p>
+              When dealing with tokenization, performance isn't just a
+              luxury—it's a requirement. The BPE algorithm involves tight loops
+              of string parsing, frequency counting, and iterative merging. In
+              high-level languages like Python or JavaScript, these operations
+              can become sluggish as vocabulary size increases.
+            </p>
+            <br />
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                padding: 20px;
+                border-radius: 8px;
+                border: 1px solid var(--border-color);
+              "
+            >
+              <h3 style="color: var(--text-primary); margin-bottom: 15px">
+                🦀 The Rust Advantage
+              </h3>
+              <p style="color: var(--text-secondary); margin-bottom: 0">
+                I chose <strong>Rust</strong> for the backend to ensure the
+                application remains blazing fast regardless of input size.
+                Rust's strict memory management allows for highly optimized
+                string manipulation without the overhead of a garbage collector.
+                This results in an API that can process complex texts and return
+                the full merge history almost instantly, providing the
+                "real-time" feel necessary for an interactive educational tool.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Interface <span class="gradient-text">Gallery</span></h2>
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img
+                  src="imgs/project-8-tokenizer/1.png"
+                  alt="Tokenizer Input State"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="imgs/project-8-tokenizer/2.png"
+                  alt="Merge Step Visualization"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="imgs/project-8-tokenizer/3.png"
+                  alt="Vocabulary Table"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="imgs/project-8-tokenizer/4.png"
+                  alt="Statistics Dashboard"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="imgs/project-8-tokenizer/5.png"
+                  alt="Byte View Toggle"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Results & <span class="gradient-text">Impact</span></h2>
+            <p>
+              This project bridges the gap between high-level AI concepts and
+              low-level systems engineering.
+            </p>
+            <p>
+              • <strong>Educational Clarity:</strong> Provides a concrete mental
+              model for developers, helping them write more token-efficient
+              prompts.
+            </p>
+            <p>
+              • <strong>High-Performance Architecture:</strong> Demonstrates the
+              ability to integrate a systems-level backend (Rust) with a modern
+              interactive frontend (React) seamlessly.
+            </p>
+            <p>
+              • <strong>Algorithmic Mastery:</strong> Proves the ability to
+              implement core AI algorithms from scratch, ensuring a deep
+              understanding of the technology stack beyond just "calling APIs."
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="codeModal"
+      class="mk-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mkModalTitle"
+      aria-describedby="mkModalDesc"
+      aria-hidden="true"
+    >
+      <div class="mk-modal__backdrop" data-close></div>
+
+      <div class="mk-modal__card" role="document">
+        <button
+          class="mk-modal__close"
+          type="button"
+          aria-label="Close"
+          data-close
+        >
+          ✕
+        </button>
+
+        <h2 id="mkModalTitle" class="mk-modal__title">Project Source Code</h2>
+        <p id="mkModalDesc" class="mk-modal__text">
+          This monorepo highlights the integration of a high-speed Rust backend
+          with a React frontend.<br /><br />
+          <strong>Key Files to Check:</strong><br />
+          • <code>server/src/bpe.rs</code> (Core BPE algorithm
+          implementation)<br />
+          • <code>server/src/main.rs</code> (Axum server setup)<br />
+          • <code>client/src/components/Tokenizer.tsx</code> (Visualization
+          logic)
+        </p>
+
+        <div class="mk-modal__actions">
+          <a
+            href="https://github.com/MilanKacar/learn-2-tokenize"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Visit GitHub Repo
+          </a>
+          <button type="button" class="btn btn-secondary" data-close>
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightboxModal" class="image-modal">
+      <span class="close-image-modal" onclick="closeLightbox()">&times;</span>
+      <img class="image-modal-content" id="expandedImg" />
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="current-year"></span> Milan Kacar. Built with passion. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
