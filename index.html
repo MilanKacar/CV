@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -49,745 +50,757 @@
       </div>
     </div>
 
-    <div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-overlay" id="navOverlay"></div>
 
-    <nav>
-      <div class="nav-container">
-        <div class="logo" onclick="navigateTo('home')">
-          <img src="./assets/icons/logo.svg" />
-        </div>
-
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <ul class="nav-links" id="navLinks">
-          <li>
-            <a
-              href="#home"
-              class="nav-link active"
-              onclick="handleNavClick(event, 'home')"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#skills"
-              class="nav-link"
-              onclick="handleNavClick(event, 'skills')"
-              >Skills</a
-            >
-          </li>
-          <li>
-            <a
-              href="#projects"
-              class="nav-link"
-              onclick="handleNavClick(event, 'projects')"
-              >Projects</a
-            >
-          </li>
-          <li>
-            <a
-              href="#experience"
-              class="nav-link"
-              onclick="handleNavClick(event, 'experience')"
-              >Experience</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="nav-link"
-              onclick="handleNavClick(event, 'contact')"
-              >Contact</a
-            >
-          </li>
-
-          <li>
-            <a href="https://milankacar.github.io/" class="nav-link">Blog</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Home Page -->
-    <div class="page active" id="homePage">
-      <!-- Hero Section -->
-      <section id="home" class="hero">
-        <div class="hero-container">
-          <div class="hero-content">
-            <span class="hero-tag">🚀 Available for inspiring projects</span>
-            <h1 id="intro-my-name">
-              Hi, I'm
-              <span
-                class="decrypted gradient-text"
-                data-text="Milan Kacar"
-                data-animate-on="load"
-                data-speed="42"
-                data-max-iterations="7"
-                data-sequential="false"
-                data-reveal-direction="start"
-                data-use-original-chars-only="false"
-                data-view-delay="300"
-                data-characters="abcdefghijklmnopqrstuvwxyz!$+()"
-                >Milan Kacar</span
-              >
-            </h1>
-            <h1 id="job-description-h1">AI Engineer | Software Engineer</h1>
-            <p>
-              AI-driven Software Engineer with over
-              <span id="years-exp"></span> years of experience in e-commerce and
-              FinTech. Geodesy graduate from TU Graz with a strong foundation in
-              mathematics, data analytics and academic research.
-            </p>
-            <div class="hero-buttons">
-              <a
-                href="#projects"
-                class="btn btn-primary"
-                onclick="navigateTo('projects'); return false;"
-                >View My Work</a
-              >
-              <a
-                href="#contact"
-                class="btn btn-secondary"
-                onclick="navigateTo('contact'); return false;"
-                >Get In Touch</a
-              >
-            </div>
-          </div>
-          <div class="hero-image">
-            <div class="profile-image">
-              <div class="profile-image-inner">
-                <img src="./assets/img/profile.jpg" />
-                <!-- Replace with: <img src="your-image.jpg" alt="Your Name"> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section id="skills">
-        <div class="container">
-          <div class="section-title">
-            <h2>Skills & <span class="gradient-text">Expertise</span></h2>
-            <p>
-              A comprehensive toolkit for building modern, AI-driven
-              applications
-            </p>
-          </div>
-
-          <div class="skills-grid">
-            <!-- AI & Machine Learning -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="assets/icons/chip-brain-gradient.svg"
-                  alt="AI / Machine Learning icon"
-                />
-              </div>
-              <h3>AI / Machine Learning</h3>
-              <p>
-                Designing, training and deploying deep learning and classical ML
-                systems (research → production).
-              </p>
-              <div class="skill-tags">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">TensorFlow</span>
-                <span class="skill-tag">NLP & LLMs</span>
-                <span class="skill-tag">Computer Vision</span>
-                <span class="skill-tag">Anomaly Detection</span>
-              </div>
-            </div>
-
-            <!-- Data Engineering & Warehousing -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="assets/icons/database-management-gradient.svg"
-                  alt="Data Engineering icon"
-                />
-              </div>
-              <h3>Data Engineering & Warehousing</h3>
-              <p>
-                Building ETL/ELT pipelines, unified data lakes and performant
-                data warehouses for analytics and ML.
-              </p>
-              <div class="skill-tags">
-                <span class="skill-tag">ETL / Data Lakes</span>
-                <span class="skill-tag">Apache Spark</span>
-                <span class="skill-tag">Databricks</span>
-                <span class="skill-tag">PostgreSQL</span>
-                <span class="skill-tag">Looker</span>
-              </div>
-            </div>
-
-            <!-- MLOps & Cloud -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="assets/icons/cloud-upload-alt-gradient.svg"
-                  alt="MLOps & Cloud icon"
-                />
-              </div>
-              <h3>MLOps & Cloud</h3>
-              <p>
-                Production-ready model lifecycle: experiment tracking, serving,
-                monitoring and CI/CD for ML.
-              </p>
-              <div class="skill-tags">
-                <span class="skill-tag">MLflow / Kubeflow</span>
-                <span class="skill-tag">Model Serving (FastAPI, gRPC)</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Kubernetes</span>
-                <span class="skill-tag">GCP / AWS</span>
-              </div>
-            </div>
-
-            <!-- Computer Vision & Research -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="assets/icons/mode-landscape-gradient.svg"
-                  alt="Computer Vision icon"
-                />
-              </div>
-              <h3>Computer Vision & Research</h3>
-              <p>
-                Applied research & projects (e.g., PV panel detection from
-                satellite imagery) using YOLOv5 and hybrid approaches.
-              </p>
-              <div class="skill-tags">
-                <span class="skill-tag">YOLOv5</span>
-                <span class="skill-tag">Satellite Imagery</span>
-                <span class="skill-tag">Image Preprocessing</span>
-                <span class="skill-tag">Cloud Compute</span>
-                <span class="skill-tag">Academic Research</span>
-              </div>
-            </div>
-
-            <!-- Software Engineering & Backend -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="assets/icons/code-window-gradient.svg"
-                  alt="Software Engineering icon"
-                />
-              </div>
-              <h3>Software Engineering & Backend</h3>
-              <p>
-                Architecting and building scalable services, APIs, and
-                automation for data-intensive systems.
-              </p>
-              <div class="skill-tags">
-                <span class="skill-tag">FastAPI</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">REST / gRPC</span>
-                <span class="skill-tag">Postgres / MongoDB</span>
-                <span class="skill-tag">CI/CD</span>
-              </div>
-            </div>
-
-            <!-- Geodesy & GIS -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="assets/icons/navigation-gradient.svg"
-                  alt="Geodesy & GIS icon"
-                />
-              </div>
-              <h3>Geodesy & GIS</h3>
-              <p>
-                Strong foundation from TU Graz: GNSS, surveying, spatial data
-                processing and map/database workflows.
-              </p>
-              <div class="skill-tags">
-                <span class="skill-tag">GNSS</span>
-                <span class="skill-tag">GIS</span>
-                <span class="skill-tag">Surveying</span>
-                <span class="skill-tag">3D Laser Scanning</span>
-              </div>
-            </div>
-
-            <!-- Programming & Tools -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="assets/icons/code-editing-gradient.svg"
-                  alt="Programming & Tooling icon"
-                />
-              </div>
-              <h3>Programming & Tooling</h3>
-              <p>
-                Polyglot engineer with strengths in scripting, systems and data
-                tooling used in production ML systems.
-              </p>
-              <div class="skill-tags">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">C / C++</span>
-                <span class="skill-tag">Java / Scala</span>
-                <span class="skill-tag">JavaScript / TypeScript</span>
-                <span class="skill-tag">Rust</span>
-                <span class="skill-tag">Go</span>
-                <span class="skill-tag">React</span>
-              </div>
-            </div>
-
-            <!-- Analytics & Product Impact -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="assets/icons/chart-histogram-gradient.svg"
-                  alt="Analytics & Product Impact icon"
-                />
-              </div>
-              <h3>Analytics & Product Impact</h3>
-              <p>
-                From forecasting &amp; BI to VC market intelligence — delivering
-                actionable insights and end-to-end AI features.
-              </p>
-              <div class="skill-tags">
-                <span class="skill-tag">Forecasting</span>
-                <span class="skill-tag">A/B Testing</span>
-                <span class="skill-tag">BI (Looker)</span>
-                <span class="skill-tag">Market Intelligence</span>
-              </div>
-            </div>
-
-            <!-- Teaching & Research -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="assets/icons/student-gradient.svg"
-                  alt="Teaching & Research icon"
-                />
-              </div>
-              <h3>Teaching & Research</h3>
-              <p>
-                Academic experience as TA and contributor to teaching materials:
-                sensor fusion, navigation and ML topics.
-              </p>
-              <div class="skill-tags">
-                <span class="skill-tag">Teaching Assistant</span>
-                <span class="skill-tag">Course Workshops</span>
-                <span class="skill-tag">Scientific Writing</span>
-                <span class="skill-tag">Experiment Design</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" style="background: rgba(102, 126, 234, 0.02)">
-        <div class="container">
-          <div class="section-title">
-            <h2>Featured <span class="gradient-text">Projects</span></h2>
-            <p>
-              A showcase of my latest work combining frontend excellence with AI
-              innovation
-            </p>
-          </div>
-          <div class="projects-grid">
-            <div
-              class="project-card"
-              data-href="./projects/ai-powered-chat-app.html"
-              role="link"
-              tabindex="0"
-              aria-label="Open AI-Powered Chat Application"
-            >
-              <div class="project-image">
-                <img
-                  src="./projects/imgs/project-1-chat-imgs/img1.jpeg"
-                  alt="AI-Powered Chat Application"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="project-content">
-                <h3>AI-Powered Chat Application</h3>
-                <p>
-                  A real-time chat platform with intelligent responses using
-                  GPT-4 and custom fine-tuned models.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">OpenAI/Gemini</span>
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">Docker</span>
-                  <span class="tech-tag">RAG</span>
-                  <span class="tech-tag">RL</span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="project-card"
-              data-href="./projects/looker-custom-viz.html"
-              role="link"
-              tabindex="1"
-              aria-label="Open Source : Looker Vizualisation"
-            >
-              <div class="project-image">
-                <img
-                  src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/refs/heads/main/doc/viz-pop.gif"
-                  alt="Looker Viz"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="project-content">
-                <h3>Looker Vizualisation - PoP</h3>
-
-                <p>
-                  A community-driven interactive analytics PlugIn that shows
-                  period-over-period results with no extra compute and no
-                  additional queries.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">js</span>
-                  <span class="tech-tag">Looker</span>
-                  <span class="tech-tag">BI</span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="project-card"
-              data-href="./projects/my-blog.html"
-              role="link"
-              tabindex="1"
-            >
-              <div class="project-image">
-                <img
-                  src="https://raw.githubusercontent.com/MilanKacar/milankacar.github.io/master/images/homepage-preview.png"
-                  alt="Blog: The Engineering Chronicles"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="project-content">
-                <h3>Blog: The Engineering Chronicles</h3>
-                <p>
-                  I don't just consume information; I synthesize it into a
-                  comprehensive knowledge base covering everything from AGI
-                  agents to market prediction models. This blog serves as my
-                  'external brain' proving that true technical mastery comes
-                  from consistent, public learning.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">jekyll-now</span>
-                  <span class="tech-tag">Github-Actions</span>
-                  <span class="tech-tag">js</span>
-                  <span class="tech-tag">css</span>
-                  <span class="tech-tag">MD</span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="project-card"
-              data-href="./projects/solar-panel-detection.html"
-              role="link"
-              tabindex="1"
-            >
-              <div class="project-image">
-                <img
-                  src="./projects/imgs/project-4-solar-imgs/results_detection_with_augmentation.png"
-                  alt="Robust Solar Panel Detections"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="project-content">
-                <h3>Robust Solar Panel Detection</h3>
-                <p>
-                  This research achieves 95.7% accuracy in detecting solar
-                  panels by combining YOLOv5 with Greedy Model Soups to address
-                  distribution shifts in satellite imagery. Validated in Vienna,
-                  the system autonomously tracked solar adoption trends from
-                  2015 to 2021, demonstrating scalable renewable energy
-                  monitoring
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">ML/AI</span>
-                  <span class="tech-tag">Scientific Research</span>
-                  <span class="tech-tag">YOLOv5</span>
-                  <span class="tech-tag">CUDA</span>
-                  <span class="tech-tag">Cloud Computing (AWS/GCP)</span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="project-card"
-              data-href="./projects/data-lake-construction-and-maintenance.html"
-              role="link"
-              tabindex="1"
-            >
-              <div class="project-image">
-                <img
-                  src="./projects/imgs/project-5-data-lake/dataform.gif"
-                  alt="Global Scale Data Lake(s)"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="project-content">
-                <h3>Global Scale Data Platforms</h3>
-                <p>
-                  Engineered robust data infrastructure supporting 40+
-                  international markets. Delivering high-fidelity data to power
-                  1,000+ business dashboards and real-time ML pipelines.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">GCP</span>
-                  <span class="tech-tag">AWS</span>
-                  <span class="tech-tag">BigQuery</span>
-                  <span class="tech-tag">DataProc</span>
-                  <span class="tech-tag">Vertex AI</span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="project-card"
-              data-href="./projects/cv-checker.html"
-              role="link"
-              tabindex="1"
-            >
-              <div class="project-image">
-                <img
-                  src="./projects/imgs/project-6-cv-validator/demo.gif"
-                  alt="FlowState Gamified Recruitment Interface"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="project-content">
-                <h3>FlowState: Gamified Recruitment</h3>
-                <p>
-                  Reinventing hiring with a high-velocity, swipe-based
-                  interface. Combines AI candidate scoring with human intuition
-                  to solve resume fatigue and speed up screening by 10x.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">React Native</span>
-                  <span class="tech-tag">FastAPI</span>
-                  <span class="tech-tag">OpenAI</span>
-                  <span class="tech-tag">Redis</span>
-                  <span class="tech-tag">TypeScript</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="project-card"
-              data-href="./projects/ai-sql-analyst.html"
-              role="link"
-              tabindex="1"
-            >
-              <div class="project-image">
-                <img
-                  src="./projects/imgs/project-7-ai-sql-analyst/ai_sql_analyst.gif"
-                  alt="AI SQL Analyst Interface"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="project-content">
-                <h3>AI SQL Analyst</h3>
-                <p>
-                  Autonomous data agent that converts plain English into safe,
-                  optimized SQL queries. Democratizes data access and reduces
-                  ad-hoc requests by 60% with built-in safety guardrails and
-                  auto-visualization.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">LangGraph</span>
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">SQLite</span>
-                  <span class="tech-tag">TypeScript</span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="project-card"
-              data-href="./projects/tokenizer.html"
-              role="link"
-              tabindex="0"
-            >
-              <div class="project-image">
-                <img
-                  src="./projects/imgs/project-8-tokenizer/project-tokenizer.gif"
-                  alt="LLM Tokenizer Playground Interface"
-                  style="width: 100%; height: 100%; object-fit: cover"
-                />
-              </div>
-              <div class="project-content">
-                <h3>LLM Tokenizer Playground</h3>
-                <p>
-                  Interactive educational tool visualizing Byte Pair Encoding
-                  (BPE) for LLMs. Built with a high-performance Rust backend to
-                  demonstrate "under the hood" mechanics of AI tokenization in
-                  real-time.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Rust</span>
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">Axum</span>
-                  <span class="tech-tag">TypeScript</span>
-                  <span class="tech-tag">Algorithms</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience">
-        <div class="container">
-          <div class="section-title">
-            <h2>Work <span class="gradient-text">Experience</span></h2>
-            <h1 style="font-size: large">
-              My professional journey in tech and
-              <span class="gradient-text">AI</span>
-            </h1>
-          </div>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-date">2021 - Present</div>
-                <h3>AI Engineer | Data Scientist</h3>
-                <h4>Niceshops GmbH</h4>
-                <p>
-                  Leading the development of AI-driven features for web
-                  applications and acting as the primary technical authority for
-                  AI initiatives across the company. Designed and implemented
-                  scalable, in-house software solutions that significantly
-                  improve operational efficiency and employee productivity.
-                  Experienced in data analytics and data engineering, with a
-                  demonstrated ability to deliver data-driven insights and
-                  automation solutions. Regularly conduct internal workshops and
-                  training sessions on Looker and data analytics, promoting a
-                  culture of continuous learning and technical excellence.
-                </p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-date">2022 - Present</div>
-                <h3>CTO | Full-stack Developer</h3>
-                <h4>Gateway Ventures</h4>
-                <p>
-                  Lead the implementation of innovative AI-driven projects,
-                  including FFG-funded initiatives that emphasize technical
-                  novelty. Develop intelligent applications using predictive
-                  algorithms, sentiment analysis, and wide varyati of
-                  technlogies. Manage project planning, technical strategy, and
-                  cross-functional coordination as part of the leadership team.
-                  Build and maintain React and Python web applications,
-                  implement CI/CD pipelines, and improve performance by 60%.
-                  Gain deep insight into venture capital processes and the
-                  intersection of technology and investment strategy.
-                </p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-date">2019 - 2022</div>
-                <h3>Software Engineer</h3>
-                <h4>TU Graz, VSI</h4>
-                <p>
-                  Working on various projects in Automation, Statistics &
-                  Geoinformatics in the Automotive industry.
-                </p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-date">2021 - 2022</div>
-                <h3>Teaching Assistant</h3>
-                <h4>TU Graz, IFG</h4>
-                <p>
-                  Teaching the students about Indoor navigation, filtering,
-                  sensor fusion.
-                </p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-date">2019 - 2019</div>
-                <h3>Survey Engineer</h3>
-                <h4>Geodata GmbH</h4>
-                <p>Tunnel survey | 3D Laser scanner measurements</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact-icons-section">
-        <div class="container">
-          <div class="section-title">
-            <h2>Let's <span class="gradient-text">Connect</span></h2>
-            <p>Interested in working together? Let's make something amazing!</p>
-          </div>
-
-          <div class="contact-icons">
-            <!-- Email -->
-            <a
-              class="icon-btn"
-              href="mailto:milankacar@live.com"
-              aria-label="Email Milan"
-              title="Email"
-            >
-              <img
-                src="./assets/icons/envelope-grad.svg"
-                alt=""
-                loading="lazy"
-              />
-            </a>
-
-            <!-- LinkedIn -->
-            <a
-              class="icon-btn"
-              href="https://linkedin.com/in/milan-kacar"
-              target="_blank"
-              rel="noopener"
-              aria-label="LinkedIn"
-              title="LinkedIn"
-            >
-              <img
-                src="./assets/icons/linkedin-grad.svg"
-                alt=""
-                loading="lazy"
-              />
-            </a>
-
-            <!-- GitHub -->
-            <a
-              class="icon-btn"
-              href="https://github.com/MilanKacar"
-              target="_blank"
-              rel="noopener"
-              aria-label="GitHub"
-              title="GitHub"
-            >
-              <img src="./assets/icons/github-grad.svg" alt="" loading="lazy" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer>
-        <div class="container">
-          <p>
-            &copy; <span id="current-year"></span> Milan Kacar. Built with
-            passion. All rights reserved.
-          </p>
-        </div>
-      </footer>
+<nav>
+  <div class="nav-container">
+    <div class="logo" onclick="navigateTo('home')">
+      <img src="./assets/icons/logo.svg" />
     </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li>
+        <a
+          href="#home"
+          class="nav-link active"
+          onclick="handleNavClick(event, 'home')"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="#skills"
+          class="nav-link"
+          onclick="handleNavClick(event, 'skills')"
+          >Skills</a
+        >
+      </li>
+      <li>
+        <a
+          href="#projects"
+          class="nav-link"
+          onclick="handleNavClick(event, 'projects')"
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a
+          href="#experience"
+          class="nav-link"
+          onclick="handleNavClick(event, 'experience')"
+          >Experience</a
+        >
+      </li>
+      <li>
+        <a
+          href="#contact"
+          class="nav-link"
+          onclick="handleNavClick(event, 'contact')"
+          >Contact</a
+        >
+      </li>
+
+      <li>
+        <a href="https://milankacar.github.io/" class="nav-link">Blog</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Home Page -->
+<div class="page active" id="homePage">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-tag">🚀 Available for inspiring projects</span>
+        <h1 id="intro-my-name">
+          Hi, I'm
+          <span
+            class="decrypted gradient-text"
+            data-text="Milan Kacar"
+            data-animate-on="load"
+            data-speed="42"
+            data-max-iterations="7"
+            data-sequential="false"
+            data-reveal-direction="start"
+            data-use-original-chars-only="false"
+            data-view-delay="300"
+            data-characters="abcdefghijklmnopqrstuvwxyz!$+()"
+            >Milan Kacar</span
+          >
+        </h1>
+        <h1 id="job-description-h1">AI Engineer | Software Engineer</h1>
+        <p>
+          AI-driven Software Engineer with over
+          <span id="years-exp"></span> years of experience in e-commerce and
+          FinTech. Geodesy graduate from TU Graz with a strong foundation in
+          mathematics, data analytics and academic research.
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="#projects"
+            class="btn btn-primary"
+            onclick="navigateTo('projects'); return false;"
+            >View My Work</a
+          >
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+            onclick="navigateTo('contact'); return false;"
+            >Get In Touch</a
+          >
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-image">
+          <div class="profile-image-inner">
+            <img src="./assets/img/profile.jpg" />
+            <!-- Replace with: <img src="your-image.jpg" alt="Your Name"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-title">
+        <h2>Skills & <span class="gradient-text">Expertise</span></h2>
+        <p>
+          A comprehensive toolkit for building modern, AI-driven
+          applications
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- AI & Machine Learning -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img
+              src="assets/icons/chip-brain-gradient.svg"
+              alt="AI / Machine Learning icon"
+            />
+          </div>
+          <h3>AI / Machine Learning</h3>
+          <p>
+            Designing, training and deploying deep learning and classical ML
+            systems (research → production).
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">NLP & LLMs</span>
+            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag">Anomaly Detection</span>
+          </div>
+        </div>
+
+        <!-- Data Engineering & Warehousing -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img
+              src="assets/icons/database-management-gradient.svg"
+              alt="Data Engineering icon"
+            />
+          </div>
+          <h3>Data Engineering & Warehousing</h3>
+          <p>
+            Building ETL/ELT pipelines, unified data lakes and performant
+            data warehouses for analytics and ML.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">ETL / Data Lakes</span>
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">Databricks</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Looker</span>
+          </div>
+        </div>
+
+        <!-- MLOps & Cloud -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img
+              src="assets/icons/cloud-upload-alt-gradient.svg"
+              alt="MLOps & Cloud icon"
+            />
+          </div>
+          <h3>MLOps & Cloud</h3>
+          <p>
+            Production-ready model lifecycle: experiment tracking, serving,
+            monitoring and CI/CD for ML.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">MLflow / Kubeflow</span>
+            <span class="skill-tag">Model Serving (FastAPI, gRPC)</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">GCP / AWS</span>
+          </div>
+        </div>
+
+        <!-- Computer Vision & Research -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img
+              src="assets/icons/mode-landscape-gradient.svg"
+              alt="Computer Vision icon"
+            />
+          </div>
+          <h3>Computer Vision & Research</h3>
+          <p>
+            Applied research & projects (e.g., PV panel detection from
+            satellite imagery) using YOLOv5 and hybrid approaches.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">YOLOv5</span>
+            <span class="skill-tag">Satellite Imagery</span>
+            <span class="skill-tag">Image Preprocessing</span>
+            <span class="skill-tag">Cloud Compute</span>
+            <span class="skill-tag">Academic Research</span>
+          </div>
+        </div>
+
+        <!-- Software Engineering & Backend -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img
+              src="assets/icons/code-window-gradient.svg"
+              alt="Software Engineering icon"
+            />
+          </div>
+          <h3>Software Engineering & Backend</h3>
+          <p>
+            Architecting and building scalable services, APIs, and
+            automation for data-intensive systems.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">REST / gRPC</span>
+            <span class="skill-tag">Postgres / MongoDB</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+
+        <!-- Geodesy & GIS -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img
+              src="assets/icons/navigation-gradient.svg"
+              alt="Geodesy & GIS icon"
+            />
+          </div>
+          <h3>Geodesy & GIS</h3>
+          <p>
+            Strong foundation from TU Graz: GNSS, surveying, spatial data
+            processing and map/database workflows.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">GNSS</span>
+            <span class="skill-tag">GIS</span>
+            <span class="skill-tag">Surveying</span>
+            <span class="skill-tag">3D Laser Scanning</span>
+          </div>
+        </div>
+
+        <!-- Programming & Tools -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img
+              src="assets/icons/code-editing-gradient.svg"
+              alt="Programming & Tooling icon"
+            />
+          </div>
+          <h3>Programming & Tooling</h3>
+          <p>
+            Polyglot engineer with strengths in scripting, systems and data
+            tooling used in production ML systems.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C / C++</span>
+            <span class="skill-tag">Java / Scala</span>
+            <span class="skill-tag">JavaScript / TypeScript</span>
+            <span class="skill-tag">Rust</span>
+            <span class="skill-tag">Go</span>
+            <span class="skill-tag">React</span>
+          </div>
+        </div>
+
+        <!-- Analytics & Product Impact -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img
+              src="assets/icons/chart-histogram-gradient.svg"
+              alt="Analytics & Product Impact icon"
+            />
+          </div>
+          <h3>Analytics & Product Impact</h3>
+          <p>
+            From forecasting &amp; BI to VC market intelligence — delivering
+            actionable insights and end-to-end AI features.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Forecasting</span>
+            <span class="skill-tag">A/B Testing</span>
+            <span class="skill-tag">BI (Looker)</span>
+            <span class="skill-tag">Market Intelligence</span>
+          </div>
+        </div>
+
+        <!-- Teaching & Research -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img
+              src="assets/icons/student-gradient.svg"
+              alt="Teaching & Research icon"
+            />
+          </div>
+          <h3>Teaching & Research</h3>
+          <p>
+            Academic experience as TA and contributor to teaching materials:
+            sensor fusion, navigation and ML topics.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Teaching Assistant</span>
+            <span class="skill-tag">Course Workshops</span>
+            <span class="skill-tag">Scientific Writing</span>
+            <span class="skill-tag">Experiment Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" style="background: rgba(102, 126, 234, 0.02)">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured <span class="gradient-text">Projects</span></h2>
+        <p>
+          A showcase of my latest work combining frontend excellence with AI
+          innovation
+        </p>
+      </div>
+      <div class="projects-grid">
+        <div
+          class="project-card"
+          data-href="./projects/ai-powered-chat-app.html"
+          role="link"
+          tabindex="0"
+          aria-label="Open AI-Powered Chat Application"
+        >
+          <div class="project-image">
+            <img
+              src="./projects/imgs/project-1-chat-imgs/img1.jpeg"
+              alt="AI-Powered Chat Application"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="project-content">
+            <h3>AI-Powered Chat Application</h3>
+            <p>
+              A real-time chat platform with intelligent responses using
+              GPT-4 and custom fine-tuned models.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">OpenAI/Gemini</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">RAG</span>
+              <span class="tech-tag">RL</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card"
+          data-href="./projects/looker-custom-viz.html"
+          role="link"
+          tabindex="1"
+          aria-label="Open Source : Looker Vizualisation"
+        >
+          <div class="project-image">
+            <img
+              src="https://raw.githubusercontent.com/MilanKacar/viz-period_over_period/refs/heads/main/doc/viz-pop.gif"
+              alt="Looker Viz"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="project-content">
+            <h3>Looker Vizualisation - PoP</h3>
+
+            <p>
+              A community-driven interactive analytics PlugIn that shows
+              period-over-period results with no extra compute and no
+              additional queries.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">js</span>
+              <span class="tech-tag">Looker</span>
+              <span class="tech-tag">BI</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card"
+          data-href="./projects/my-blog.html"
+          role="link"
+          tabindex="1"
+        >
+          <div class="project-image">
+            <img
+              src="https://raw.githubusercontent.com/MilanKacar/milankacar.github.io/master/images/homepage-preview.png"
+              alt="Blog: The Engineering Chronicles"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="project-content">
+            <h3>Blog: The Engineering Chronicles</h3>
+            <p>
+              I don't just consume information; I synthesize it into a
+              comprehensive knowledge base covering everything from AGI
+              agents to market prediction models. This blog serves as my
+              'external brain' proving that true technical mastery comes
+              from consistent, public learning.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">jekyll-now</span>
+              <span class="tech-tag">Github-Actions</span>
+              <span class="tech-tag">js</span>
+              <span class="tech-tag">css</span>
+              <span class="tech-tag">MD</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card"
+          data-href="./projects/solar-panel-detection.html"
+          role="link"
+          tabindex="1"
+        >
+          <div class="project-image">
+            <img
+              src="./projects/imgs/project-4-solar-imgs/results_detection_with_augmentation.png"
+              alt="Robust Solar Panel Detections"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="project-content">
+            <h3>Robust Solar Panel Detection</h3>
+            <p>
+              This research achieves 95.7% accuracy in detecting solar
+              panels by combining YOLOv5 with Greedy Model Soups to address
+              distribution shifts in satellite imagery. Validated in Vienna,
+              the system autonomously tracked solar adoption trends from
+              2015 to 2021, demonstrating scalable renewable energy
+              monitoring
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">ML/AI</span>
+              <span class="tech-tag">Scientific Research</span>
+              <span class="tech-tag">YOLOv5</span>
+              <span class="tech-tag">CUDA</span>
+              <span class="tech-tag">Cloud Computing (AWS/GCP)</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card"
+          data-href="./projects/data-lake-construction-and-maintenance.html"
+          role="link"
+          tabindex="1"
+        >
+          <div class="project-image">
+            <img
+              src="./projects/imgs/project-5-data-lake/dataform.gif"
+              alt="Global Scale Data Lake(s)"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="project-content">
+            <h3>Global Scale Data Platforms</h3>
+            <p>
+              Engineered robust data infrastructure supporting 40+
+              international markets. Delivering high-fidelity data to power
+              1,000+ business dashboards and real-time ML pipelines.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">GCP</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">BigQuery</span>
+              <span class="tech-tag">DataProc</span>
+              <span class="tech-tag">Vertex AI</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card"
+          data-href="./projects/cv-checker.html"
+          role="link"
+          tabindex="1"
+        >
+          <div class="project-image">
+            <img
+              src="./projects/imgs/project-6-cv-validator/demo.gif"
+              alt="FlowState Gamified Recruitment Interface"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="project-content">
+            <h3>FlowState: Gamified Recruitment</h3>
+            <p>
+              Reinventing hiring with a high-velocity, swipe-based
+              interface. Combines AI candidate scoring with human intuition
+              to solve resume fatigue and speed up screening by 10x.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">OpenAI</span>
+              <span class="tech-tag">Redis</span>
+              <span class="tech-tag">TypeScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project-card"
+          data-href="./projects/ai-sql-analyst.html"
+          role="link"
+          tabindex="1"
+        >
+          <div class="project-image">
+            <img
+              src="./projects/imgs/project-7-ai-sql-analyst/ai_sql_analyst.gif"
+              alt="AI SQL Analyst Interface"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="project-content">
+            <h3>AI SQL Analyst</h3>
+            <p>
+              Autonomous data agent that converts plain English into safe,
+              optimized SQL queries. Democratizes data access and reduces
+              ad-hoc requests by 60% with built-in safety guardrails and
+              auto-visualization.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">LangGraph</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">TypeScript</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card"
+          data-href="./projects/tokenizer.html"
+          role="link"
+          tabindex="0"
+        >
+          <div class="project-image">
+            <img
+              src="./projects/imgs/project-8-tokenizer/project-tokenizer.gif"
+              alt="LLM Tokenizer Playground Interface"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="project-content">
+            <h3>LLM Tokenizer Playground</h3>
+            <p>
+              Interactive educational tool visualizing Byte Pair Encoding
+              (BPE) for LLMs. Built with a high-performance Rust backend to
+              demonstrate "under the hood" mechanics of AI tokenization in
+              real-time.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Axum</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Algorithms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-title">
+        <h2>Work <span class="gradient-text">Experience</span></h2>
+        <h1 style="font-size: large">
+          My professional journey in tech and
+          <span class="gradient-text">AI</span>
+        </h1>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">06/2026 - Present</div>
+            <h3>AI | Data Lead</h3>
+            <h4>Schrack Technik GmbH</h4>
+            <p>
+              Leading the strategic transformation of the company's legacy
+              Data Warehouse to Microsoft Fabric, owning the architecture,
+              migration strategy, and platform rollout end to end. Serve as
+              the primary in-house authority on AI — responsible for
+              governing AI usage across the organization, defining and
+              prioritizing AI initiatives, and acting as the main point of
+              contact and spokesperson for all AI-related topics, both
+              internally and with external partners.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2021 - 06/2026</div>
+            <h3>AI Engineer | Data Scientist</h3>
+            <h4>Niceshops GmbH</h4>
+            <p>
+              Led the development of AI-driven features for web
+              applications and acted as the primary technical authority for
+              AI initiatives across the company. Designed and implemented
+              scalable, in-house software solutions that significantly
+              improved operational efficiency and employee productivity.
+              Regularly conducted internal workshops and training sessions
+              on Looker and data analytics, promoting a culture of
+              continuous learning and technical excellence.
+            </p>
+            <div class="timeline-date" style="margin-top: 1rem">
+              2022 - 06/2026
+            </div>
+            <h3>CTO | Full-stack Developer</h3>
+            <h4>Gateway Ventures</h4>
+            <p>
+              Led the implementation of innovative AI-driven projects,
+              including FFG-funded initiatives that emphasized technical
+              novelty. Developed intelligent applications using predictive
+              algorithms, sentiment analysis, and a wide variety of
+              technologies. Managed project planning, technical strategy,
+              and cross-functional coordination as part of the leadership
+              team. Built and maintained React and Python web applications,
+              implemented CI/CD pipelines, and improved performance by 60%.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2019 - 2022</div>
+            <h3>Software Engineer</h3>
+            <h4>TU Graz, VSI</h4>
+            <p>
+              Working on various projects in Automation, Statistics &
+              Geoinformatics in the Automotive industry.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2021 - 2022</div>
+            <h3>Teaching Assistant</h3>
+            <h4>TU Graz, IFG</h4>
+            <p>
+              Teaching the students about Indoor navigation, filtering,
+              sensor fusion.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2019 - 2019</div>
+            <h3>Survey Engineer</h3>
+            <h4>Geodata GmbH</h4>
+            <p>Tunnel survey | 3D Laser scanner measurements</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-icons-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Let's <span class="gradient-text">Connect</span></h2>
+        <p>Interested in working together? Let's make something amazing!</p>
+      </div>
+
+      <div class="contact-icons">
+        <!-- Email -->
+        <a
+          class="icon-btn"
+          href="mailto:milankacar@live.com"
+          aria-label="Email Milan"
+          title="Email"
+        >
+          <img
+            src="./assets/icons/envelope-grad.svg"
+            alt=""
+            loading="lazy"
+          />
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          class="icon-btn"
+          href="https://linkedin.com/in/milan-kacar"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          title="LinkedIn"
+        >
+          <img
+            src="./assets/icons/linkedin-grad.svg"
+            alt=""
+            loading="lazy"
+          />
+        </a>
+
+        <!-- GitHub -->
+        <a
+          class="icon-btn"
+          href="https://github.com/MilanKacar"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          title="GitHub"
+        >
+          <img src="./assets/icons/github-grad.svg" alt="" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        &copy; <span id="current-year"></span> Milan Kacar. Built with
+        passion. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</div>
+
   </body>
 </html>
